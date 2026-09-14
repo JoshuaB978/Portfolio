@@ -554,20 +554,35 @@
 
   <!-- Projects Section -->
   <div class="tui-section" id="projects">
+
     <div class="section-header">
+
       <div class="section-header-title">
         <span class="prompt-char">#</span> LS -LA ./projects/
       </div>
-      <span class="tag-item">COUNT: 2</span>
+
+      <span class="tag-item">COUNT: 3</span>
+
     </div>
+
     <div class="section-body">
+
       <div class="grid-2">
+
+        <!-- NCL PROJECT -->
+
         <div class="panel-card">
+
           <div class="card-idx">CYBERSECURITY COMPETITION</div>
-          <div class="card-title">National Cyber League Individual Game CTF</div>
+
+          <div class="card-title">
+            National Cyber League Individual Game CTF
+          </div>
+
           <div class="card-desc">
             Ranked 26th out of 6,973 competitors in the Spring 2026 Individual Game, achieving a perfect 3,000/3,000 score and placing in the top 0.4% nationally. Tested across web exploitation, reverse engineering, cryptography, password cracking, and recon.
           </div>
+
           <div class="tag-list">
             <span class="tag-item">Web Exploitation</span>
             <span class="tag-item">Ghidra</span>
@@ -575,81 +590,145 @@
             <span class="tag-item">Binary Ninja</span>
             <span class="tag-item">Cryptography</span>
           </div>
+
           <div style="margin-top: 1rem; display: flex; justify-content: space-between; align-items: center;">
+
             <button onclick="document.getElementById('modal').classList.add('active')" class="btn-cli" style="cursor: pointer;">
               ./read_debrief.sh
             </button>
+
             <span class="tag-item">SPRING 2026</span>
+
           </div>
+
         </div>
 
-        <div class="panel-card" style="border-style: dashed;">
-          <div class="card-idx">PIPELINE TASK</div>
-          <div class="card-title">Next Cybersecurity Project</div>
+
+        <!-- RANSOMWARE PROJECT -->
+
+        <div class="panel-card">
+
+          <div class="card-idx">ACADEMIC SECURITY PROJECT</div>
+
+          <div class="card-title">
+            Ransomware Simulation
+          </div>
+
           <div class="card-desc">
-            Work in progress. I am currently evaluating project ideas that will demonstrate practical security engineering or offensive security skills. A complete case study will be published here with its results and lessons learned.
+            Developed a Python-based ransomware simulation in an isolated VM environment to explore AES-256 encryption, ECDH key exchange, HKDF, multithreaded file processing, and cryptographic key management.
           </div>
+
           <div class="tag-list">
-            <span class="tag-item">Security Engineering</span>
-            <span class="tag-item">Offensive Security</span>
-            <span class="tag-item">Documentation</span>
+            <span class="tag-item">Python</span>
+            <span class="tag-item">Cryptography</span>
+            <span class="tag-item">AES-256</span>
+            <span class="tag-item">ECDH</span>
+            <span class="tag-item">Multithreading</span>
           </div>
+
           <div style="margin-top: 1rem; display: flex; justify-content: space-between; align-items: center;">
-            <span style="font-size: 0.75rem; color: var(--text-dim);">[EXECUTION PENDING]</span>
-            <span class="status-badge">WIP</span>
+
+            <button onclick="document.getElementById('ransomware-modal').classList.add('active')" class="btn-cli" style="cursor: pointer;">
+              ./read_debrief.sh
+            </button>
+
+            <span class="tag-item">ACADEMIC PROJECT</span>
+
           </div>
+
         </div>
+
       </div>
     </div>
   </div>
 
+
   <!-- Writeups -->
+
   <div class="tui-section" id="writeups">
+
     <div class="section-header">
+
       <div class="section-header-title">
         <span class="prompt-char">#</span> TAIL -F ./lab_writeups/*.md
       </div>
+
       <span class="status-badge">STAGING</span>
+
     </div>
+
     <div class="section-body">
+
       <div class="grid-2">
+
         <div class="panel-card" style="border-style: dashed;">
+
           <div class="card-idx">PORTSWIGGER ACADEMY</div>
-          <div class="card-title">Web Application Security Writeups</div>
-          <div class="card-desc">Work in progress. Selected writeups from completed PortSwigger labs focusing on methodology, vulnerability patterns, exploitation techniques, and defensive remediation.</div>
+
+          <div class="card-title">
+            Web Application Security Writeups
+          </div>
+
+          <div class="card-desc">
+            Work in progress. Selected writeups from completed PortSwigger labs focusing on methodology, vulnerability patterns, exploitation techniques, and defensive remediation.
+          </div>
+
           <div class="tag-list">
             <span class="tag-item">PortSwigger</span>
             <span class="tag-item">Web Security</span>
             <span class="tag-item">Remediation</span>
           </div>
+
         </div>
 
+
         <div class="panel-card" style="border-style: dashed;">
+
           <div class="card-idx">CTF PRACTICE</div>
-          <div class="card-title">CTF Walkthroughs & Reflections</div>
-          <div class="card-desc">Work in progress. Future entries documenting selected CTF challenges, reasoning used to approach them, lessons from unsuccessful attempts, and repeatable patterns.</div>
+
+          <div class="card-title">
+            CTF Walkthroughs & Reflections
+          </div>
+
+          <div class="card-desc">
+            Work in progress. Future entries documenting selected CTF challenges, reasoning used to approach them, lessons from unsuccessful attempts, and repeatable patterns.
+          </div>
+
           <div class="tag-list">
             <span class="tag-item">CTFs</span>
             <span class="tag-item">Problem-Solving</span>
             <span class="tag-item">Learning Notes</span>
           </div>
+
         </div>
+
       </div>
     </div>
   </div>
 
+
   <!-- Skills Section -->
+
   <div class="tui-section" id="skills">
+
     <div class="section-header">
+
       <div class="section-header-title">
         <span class="prompt-char">#</span> CAT /etc/capabilities.d/*
       </div>
+
       <span class="tag-item">LOADED</span>
+
     </div>
+
     <div class="section-body">
+
       <div class="skills-wrapper">
+
         <div class="skills-col">
+
           <h4>// SEC_ENGINEERING & GRC</h4>
+
           <ul>
             <li>Vulnerability Assessment</li>
             <li>Vulnerability Management</li>
@@ -658,9 +737,14 @@
             <li>Security Compliance</li>
             <li>Network Security</li>
           </ul>
+
         </div>
+
+
         <div class="skills-col">
+
           <h4>// OFFENSIVE & APPSEC</h4>
+
           <ul>
             <li>Network Reconnaissance</li>
             <li>Network Enumeration</li>
@@ -670,18 +754,28 @@
             <li>Nmap / Nessus</li>
             <li>Wireshark / tcpdump</li>
           </ul>
+
         </div>
+
+
         <div class="skills-col">
+
           <h4>// SYSTEMS, PROTOCOLS & CODE</h4>
+
           <ul>
             <li>TCP/IP</li>
             <li>Linux</li>
             <li>Windows</li>
             <li>Python</li>
           </ul>
+
         </div>
+
+
         <div class="skills-col">
+
           <h4>// PROFESSIONAL & ANALYTICAL</h4>
+
           <ul>
             <li>Problem Solving</li>
             <li>Analytical Thinking</li>
@@ -689,11 +783,18 @@
             <li>Communication</li>
             <li>Teamwork</li>
           </ul>
+
         </div>
 
+
         <div class="tools-tag-cloud">
-          <h4 style="font-size: 0.8rem; color: var(--green); margin-bottom: 0.6rem;">// ARSENAL_AND_TOOLS</h4>
+
+          <h4 style="font-size: 0.8rem; color: var(--green); margin-bottom: 0.6rem;">
+            // ARSENAL_AND_TOOLS
+          </h4>
+
           <div class="tag-list">
+
             <span class="tag-item">Nmap</span>
             <span class="tag-item">Wireshark</span>
             <span class="tag-item">Burp Suite</span>
@@ -707,87 +808,297 @@
             <span class="tag-item">Arkime</span>
             <span class="tag-item">tshark</span>
             <span class="tag-item">pfSense</span>
+
           </div>
         </div>
+
       </div>
     </div>
   </div>
 
+
   <!-- Contact -->
+
   <div class="tui-section" id="contact">
+
     <div class="section-header">
+
       <div class="section-header-title">
         <span class="prompt-char">#</span> NETCAT -LVNP 2026 // GET IN TOUCH
       </div>
+
       <span class="status-badge">LISTENING</span>
+
     </div>
+
     <div class="section-body" style="text-align: center; padding: 2rem 1rem;">
-      <h3 style="color: var(--text-bright); margin-bottom: 0.5rem;">[ ESTABLISH CONNECTION ]</h3>
+
+      <h3 style="color: var(--text-bright); margin-bottom: 0.5rem;">
+        [ ESTABLISH CONNECTION ]
+      </h3>
+
       <p style="max-width: 650px; margin: 0 auto 1.25rem; font-size: 0.9rem; color: var(--text);">
         I’m currently seeking cybersecurity internship opportunities, especially in security engineering and offensive security. I’m also open to related roles where I can contribute, learn, and continue developing practical cybersecurity experience.
       </p>
+
       <div style="font-size: 1.1rem; color: var(--green); margin-bottom: 1.5rem; font-weight: 600;">
         joshuabarrus2006@gmail.com
       </div>
+
       <div class="cli-actions" style="justify-content: center;">
-        <a href="mailto:joshuabarrus2006@gmail.com" class="btn-cli btn-primary">mailx -s "Hello" joshua</a>
-        <a href="https://github.com/JoshuaB978" target="_blank" rel="noopener noreferrer" class="btn-cli">github.com/JoshuaB978</a>
-        <a href="https://www.linkedin.com/in/joshuabarrus/" target="_blank" rel="noopener noreferrer" class="btn-cli">linkedin/in/joshuabarrus</a>
+
+        <a href="mailto:joshuabarrus2006@gmail.com" class="btn-cli btn-primary">
+          mailx -s "Hello" joshua
+        </a>
+
+        <a href="https://github.com/JoshuaB978" target="_blank" rel="noopener noreferrer" class="btn-cli">
+          github.com/JoshuaB978
+        </a>
+
+        <a href="https://www.linkedin.com/in/joshuabarrus/" target="_blank" rel="noopener noreferrer" class="btn-cli">
+          linkedin/in/joshuabarrus
+        </a>
+
       </div>
+
     </div>
   </div>
+
 
   <div class="tui-footer">
-    <div>SYSTEM: JOSHUA_BARRUS_PORTFOLIO // v2.6.0</div>
-    <div>SESSION ID: <span id="sessYear"></span>_SEC_SHELL</div>
+
+    <div>
+      SYSTEM: JOSHUA_BARRUS_PORTFOLIO // v2.6.0
+    </div>
+
+    <div>
+      SESSION ID: <span id="sessYear"></span>_SEC_SHELL
+    </div>
+
   </div>
+
 </div>
 
-<!-- Debrief Modal -->
+
+<!-- NCL Debrief Modal -->
+
 <div class="modal-overlay" id="modal" onclick="if(event.target===this) this.classList.remove('active')">
+
   <div class="tui-modal">
+
     <div class="window-bar">
+
       <span>DEBRIEF: NCL_SPRING_2026.TXT</span>
-      <button onclick="document.getElementById('modal').classList.remove('active')" style="background:none; border:none; color:var(--text); cursor:pointer; font-family:var(--font-mono);">[X CLOSE]</button>
+
+      <button
+        onclick="document.getElementById('modal').classList.remove('active')"
+        style="background:none; border:none; color:var(--text); cursor:pointer; font-family:var(--font-mono);">
+        [X CLOSE]
+      </button>
+
     </div>
+
+
     <div style="padding: 1.5rem; max-height: 80vh; overflow-y: auto;">
+
       <div style="color: var(--green); font-size: 1.1rem; font-weight: 700; margin-bottom: 0.5rem;">
         National Cyber League Individual Game CTF
       </div>
+
       <div style="background: var(--bg-subtle); border-left: 3px solid var(--green); padding: 0.75rem; margin-bottom: 1rem; font-size: 0.85rem;">
         <strong>Result:</strong> 26th out of 6,973 competitors (Top 0.4%), with a perfect 3,000/3,000 score.
       </div>
-      
-      <div style="margin-bottom: 1rem;">
-        <h4 style="color: var(--cyan); font-size: 0.9rem;">› Problem-Solving</h4>
-        <p style="font-size: 0.82rem; color: var(--text);">Worked through unfamiliar technical challenges under competition constraints by identifying relevant information, testing possible solutions, and adjusting my approach when initial attempts were unsuccessful.</p>
-      </div>
+
 
       <div style="margin-bottom: 1rem;">
-        <h4 style="color: var(--cyan); font-size: 0.9rem;">› Web Application Exploitation</h4>
-        <p style="font-size: 0.82rem; color: var(--text);">Gained experience practicing reconnaissance, identifying recurring vulnerability patterns, and exploiting vulnerabilities presented in web application challenges.</p>
+
+        <h4 style="color: var(--cyan); font-size: 0.9rem;">
+          › Problem-Solving
+        </h4>
+
+        <p style="font-size: 0.82rem; color: var(--text);">
+          Worked through unfamiliar technical challenges under competition constraints by identifying relevant information, testing possible solutions, and adjusting my approach when initial attempts were unsuccessful.
+        </p>
+
       </div>
 
-      <div style="margin-bottom: 1rem;">
-        <h4 style="color: var(--cyan); font-size: 0.9rem;">› Enumeration & Exploitation</h4>
-        <p style="font-size: 0.82rem; color: var(--text);">Analyzed different types of scripts, identified weaknesses in their behavior or implementation, and determined how those weaknesses could be exploited.</p>
-      </div>
 
       <div style="margin-bottom: 1rem;">
-        <h4 style="color: var(--cyan); font-size: 0.9rem;">› Reverse Engineering</h4>
-        <p style="font-size: 0.82rem; color: var(--text);">Used Binary Ninja and Ghidra to examine program behavior and support the reverse-engineering process during competition challenges.</p>
+
+        <h4 style="color: var(--cyan); font-size: 0.9rem;">
+          › Web Application Exploitation
+        </h4>
+
+        <p style="font-size: 0.82rem; color: var(--text);">
+          Gained experience practicing reconnaissance, identifying recurring vulnerability patterns, and exploiting vulnerabilities presented in web application challenges.
+        </p>
+
       </div>
+
+
+      <div style="margin-bottom: 1rem;">
+
+        <h4 style="color: var(--cyan); font-size: 0.9rem;">
+          › Enumeration & Exploitation
+        </h4>
+
+        <p style="font-size: 0.82rem; color: var(--text);">
+          Analyzed different types of scripts, identified weaknesses in their behavior or implementation, and determined how those weaknesses could be exploited.
+        </p>
+
+      </div>
+
+
+      <div style="margin-bottom: 1rem;">
+
+        <h4 style="color: var(--cyan); font-size: 0.9rem;">
+          › Reverse Engineering
+        </h4>
+
+        <p style="font-size: 0.82rem; color: var(--text);">
+          Used Binary Ninja and Ghidra to examine program behavior and support the reverse-engineering process during competition challenges.
+        </p>
+
+      </div>
+
 
       <div>
-        <h4 style="color: var(--cyan); font-size: 0.9rem;">› Scanning & Reconnaissance</h4>
-        <p style="font-size: 0.82rem; color: var(--text);">Used Nmap and other tools to identify systems, enumerate available information, and collect the details needed to approach later challenges.</p>
+
+        <h4 style="color: var(--cyan); font-size: 0.9rem;">
+          › Scanning & Reconnaissance
+        </h4>
+
+        <p style="font-size: 0.82rem; color: var(--text);">
+          Used Nmap and other tools to identify systems, enumerate available information, and collect the details needed to approach later challenges.
+        </p>
+
       </div>
+
     </div>
+
   </div>
+
 </div>
 
+
+<!-- Ransomware Simulation Debrief Modal -->
+
+<div class="modal-overlay" id="ransomware-modal" onclick="if(event.target===this) this.classList.remove('active')">
+
+  <div class="tui-modal">
+
+    <div class="window-bar">
+
+      <span>DEBRIEF: RANSOMWARE_SIMULATION.TXT</span>
+
+      <button
+        onclick="document.getElementById('ransomware-modal').classList.remove('active')"
+        style="background:none; border:none; color:var(--text); cursor:pointer; font-family:var(--font-mono);">
+        [X CLOSE]
+      </button>
+
+    </div>
+
+
+    <div style="padding: 1.5rem; max-height: 80vh; overflow-y: auto;">
+
+      <div style="color: var(--green); font-size: 1.1rem; font-weight: 700; margin-bottom: 0.5rem;">
+        Ransomware Simulation
+      </div>
+
+
+      <div style="background: var(--bg-subtle); border-left: 3px solid var(--green); padding: 0.75rem; margin-bottom: 1rem; font-size: 0.85rem;">
+        <strong>Context:</strong> University cybersecurity project developed and tested exclusively in an isolated virtual machine environment.
+      </div>
+
+
+      <div style="margin-bottom: 1rem;">
+
+        <h4 style="color: var(--cyan); font-size: 0.9rem;">
+          › Project Overview
+        </h4>
+
+        <p style="font-size: 0.82rem; color: var(--text);">
+          Developed a Python-based ransomware simulation to explore the technical components involved in file encryption, cryptographic key management, concurrent file processing, and system-level file operations. A separate decryption program was developed to recover encrypted files using the corresponding private key.
+        </p>
+
+      </div>
+
+
+      <div style="margin-bottom: 1rem;">
+
+        <h4 style="color: var(--cyan); font-size: 0.9rem;">
+          › Cryptography
+        </h4>
+
+        <p style="font-size: 0.82rem; color: var(--text);">
+          Implemented AES-256 in CTR mode for file encryption. Used an ephemeral elliptic-curve key with ECDH to establish shared key material, followed by HKDF-SHA256 to derive a symmetric key used to protect the AES encryption key.
+        </p>
+
+      </div>
+
+
+      <div style="margin-bottom: 1rem;">
+
+        <h4 style="color: var(--cyan); font-size: 0.9rem;">
+          › Concurrency & Performance
+        </h4>
+
+        <p style="font-size: 0.82rem; color: var(--text);">
+          Implemented a producer-consumer architecture using multiple worker threads and a bounded queue to process files concurrently. File data was processed in 4 MB chunks, and process priority was reduced to limit system resource impact during testing.
+        </p>
+
+      </div>
+
+
+      <div style="margin-bottom: 1rem;">
+
+        <h4 style="color: var(--cyan); font-size: 0.9rem;">
+          › Key Management
+        </h4>
+
+        <p style="font-size: 0.82rem; color: var(--text);">
+          Explored the challenges involved in protecting encryption keys while maintaining the ability to recover encrypted data. The project also highlighted the distinction between removing a Python reference to a key and guaranteeing secure memory erasure.
+        </p>
+
+      </div>
+
+
+      <div style="margin-bottom: 1rem;">
+
+        <h4 style="color: var(--cyan); font-size: 0.9rem;">
+          › Lessons Learned
+        </h4>
+
+        <p style="font-size: 0.82rem; color: var(--text);">
+          Combined cryptography, operating-system functionality, concurrency, filesystem operations, and programming into a single security-focused project. The project provided practical experience with the tradeoffs involved in designing systems that manipulate large numbers of files while managing cryptographic material.
+        </p>
+
+      </div>
+
+
+      <div style="background: var(--bg-subtle); border-left: 3px solid var(--amber); padding: 0.75rem; font-size: 0.8rem;">
+
+        <strong style="color: var(--amber);">
+          ENVIRONMENT:
+        </strong>
+
+        Developed and tested exclusively within an isolated virtual machine for academic cybersecurity coursework.
+
+      </div>
+
+    </div>
+
+  </div>
+
+</div>
+
+
 <script>
+
   document.getElementById('sessYear').textContent = new Date().getFullYear();
+
 </script>
+
 </body>
 </html>
