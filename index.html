@@ -26,7 +26,11 @@
     }
 
     * { box-sizing: border-box; margin: 0; padding: 0; }
-    html { scroll-behavior: smooth; }
+    html {
+      scroll-behavior: smooth;
+      scroll-restoration: manual;
+    }
+
     body {
       background-color: var(--bg);
       color: var(--text);
@@ -34,7 +38,7 @@
       font-size: 14px;
       line-height: 1.6;
       min-height: 100vh;
-      background-image: 
+      background-image:
         linear-gradient(rgba(0, 255, 102, 0.02) 1px, transparent 1px),
         linear-gradient(90deg, rgba(0, 255, 102, 0.02) 1px, transparent 1px);
       background-size: 24px 24px;
@@ -47,6 +51,7 @@
     }
 
     /* Top Bar & TUI Header */
+
     .tui-header {
       border: 1px solid var(--border);
       background: var(--bg-panel);
@@ -78,6 +83,7 @@
       border-radius: 50%;
       display: inline-block;
     }
+
     .dot-red { background: #ff5f56; }
     .dot-yellow { background: #ffbd2e; }
     .dot-green { background: #27c93f; }
@@ -101,16 +107,19 @@
       gap: 0.4rem;
     }
 
-    .nav-tab:hover, .nav-tab.active {
+    .nav-tab:hover,
+    .nav-tab.active {
       background: var(--bg-panel);
       color: var(--green);
     }
 
     /* Shell Prompt Styles */
+
     .prompt {
       color: var(--green);
       font-weight: 600;
     }
+
     .prompt-path { color: var(--cyan); }
     .prompt-char { color: var(--amber); }
 
@@ -125,6 +134,7 @@
     }
 
     /* Hero Grid */
+
     .hero-grid {
       display: grid;
       grid-template-columns: 140px 1fr;
@@ -232,6 +242,7 @@
     }
 
     /* Telemetry / Metrics Bar */
+
     .metrics-bar {
       display: grid;
       grid-template-columns: repeat(4, 1fr);
@@ -266,6 +277,7 @@
     }
 
     /* Section Wrapper */
+
     .tui-section {
       border: 1px solid var(--border);
       background: var(--bg-panel);
@@ -297,6 +309,7 @@
     }
 
     /* Cards & Grids */
+
     .grid-3 {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
@@ -341,6 +354,7 @@
     }
 
     /* Tags */
+
     .tag-list {
       display: flex;
       flex-wrap: wrap;
@@ -366,6 +380,7 @@
     }
 
     /* Skills CLI Table */
+
     .skills-wrapper {
       display: grid;
       grid-template-columns: repeat(2, 1fr);
@@ -391,6 +406,7 @@
       align-items: center;
       gap: 0.4rem;
     }
+
     .skills-col li::before {
       content: "›";
       color: var(--amber);
@@ -405,6 +421,7 @@
     }
 
     /* Modal */
+
     .modal-overlay {
       position: fixed;
       inset: 0;
@@ -415,7 +432,11 @@
       justify-content: center;
       padding: 1rem;
     }
-    .modal-overlay.active { display: flex; }
+
+    .modal-overlay.active {
+      display: flex;
+    }
+
     .tui-modal {
       width: min(720px, 100%);
       background: var(--bg-panel);
@@ -424,6 +445,7 @@
     }
 
     /* Footer */
+
     .tui-footer {
       border: 1px solid var(--border);
       background: #080c12;
@@ -434,37 +456,77 @@
       font-size: 0.75rem;
       color: var(--text-dim);
     }
-    .tui-footer a { color: var(--green); text-decoration: none; }
+
+    .tui-footer a {
+      color: var(--green);
+      text-decoration: none;
+    }
 
     @media (max-width: 800px) {
-      .hero-grid { grid-template-columns: 1fr; }
-      .metrics-bar { grid-template-columns: repeat(2, 1fr); }
-      .grid-3, .grid-2, .skills-wrapper { grid-template-columns: 1fr; }
-      .tools-tag-cloud { grid-column: span 1; }
+      .hero-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .metrics-bar {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .grid-3,
+      .grid-2,
+      .skills-wrapper {
+        grid-template-columns: 1fr;
+      }
+
+      .tools-tag-cloud {
+        grid-column: span 1;
+      }
     }
   </style>
 </head>
+
 <body>
 
 <div class="container">
+
   <div class="tui-header">
+
     <div class="window-bar">
       <div class="window-dots">
         <span class="dot dot-red"></span>
         <span class="dot dot-yellow"></span>
         <span class="dot dot-green"></span>
       </div>
+
       <div>bash - joshua@sec: /home/joshua/portfolio</div>
+
       <div>SSH: 22/tcp [CONNECTED]</div>
     </div>
 
+
     <div class="nav-tabs">
-      <a href="#about" class="nav-tab active"><span>[1]</span> bio.sh</a>
-      <a href="#focus" class="nav-tab"><span>[2]</span> continuous_dev.log</a>
-      <a href="#projects" class="nav-tab"><span>[3]</span> projects/</a>
-      <a href="#skills" class="nav-tab"><span>[4]</span> capabilities.cfg</a>
-      <a href="#contact" class="nav-tab"><span>[5]</span> contact.init</a>
+
+      <a href="#about" class="nav-tab active">
+        <span>[1]</span> bio.sh
+      </a>
+
+      <a href="#focus" class="nav-tab">
+        <span>[2]</span> continuous_dev.log
+      </a>
+
+      <a href="#projects" class="nav-tab">
+        <span>[3]</span> projects/
+      </a>
+
+      <a href="#skills" class="nav-tab">
+        <span>[4]</span> capabilities.cfg
+      </a>
+
+      <a href="#contact" class="nav-tab">
+        <span>[5]</span> contact.init
+      </a>
+
     </div>
+
 
     <pre class="ascii-banner">
      ██╗██████╗  █████╗ ██████╗ ██████╗ ██╗   ██╗███████╗
@@ -472,115 +534,210 @@
      ██║██████╔╝███████║██████╔╝██████╔╝██║   ██║███████╗
 ██   ██║██╔══██╗██╔══██║██╔══██╗██╔══██╗██║   ██║╚════██║
 ╚█████╔╝██████╔╝██║  ██║██║  ██║██║  ██║╚██████╔╝███████║
- ╚════╝ ╚═════╝ ╚═╝  ╚═╝╚═╝  ╚═╝╚═╝  ╚═╝ ╚═════╝ ╚══════╝
+ ╚════╝ ╚═════╝ ╚═╝  ╚═╝╚═╝  ╚═╝╚═╝  ╚═╝ ╚══════╝ ╚══════╝
  [CYBERSECURITY STUDENT]
     </pre>
 
+
     <div class="hero-grid" id="about">
+
       <div class="avatar-frame">
         <div class="avatar-fallback">JB</div>
-        <img src="profile.jpg" alt="Joshua Barrus" class="avatar-img" onerror="this.style.display='none'">
+
+        <img
+          src="profile.jpg"
+          alt="Joshua Barrus"
+          class="avatar-img"
+          onerror="this.style.display='none'"
+        >
       </div>
 
+
       <div class="hero-text">
+
         <div class="hero-status-pill">
-          <span class="pulse"></span> STATUS: OPEN TO INTERNSHIPS (SUMMER 2027)
+          <span class="pulse"></span>
+          STATUS: OPEN TO INTERNSHIPS (SUMMER 2027)
         </div>
-        <h1><span class="prompt">joshua@sec:~$</span> whoami</h1>
+
+        <h1>
+          <span class="prompt">joshua@sec:~$</span> whoami
+        </h1>
+
         <p class="hero-bio">
           I’m a cybersecurity student at Anderson University pursuing internship opportunities in security engineering, offensive security, and adjacent roles. After ranking 26th out of 6,973 competitors in the Spring 2026 National Cyber League Individual Game CTF, I’m continuing to build practical skills through competitions, coursework, programming, hands-on labs, and internship experience.
         </p>
 
+
         <div class="cli-actions">
-          <a href="#projects" class="btn-cli btn-primary">./view_projects.sh</a>
-          <a href="https://github.com/JoshuaB978" target="_blank" rel="noopener noreferrer" class="btn-cli">git remote -v (GitHub) ↗</a>
-          <a href="https://www.linkedin.com/in/joshuabarrus/" target="_blank" rel="noopener noreferrer" class="btn-cli">linkedin --connect ↗</a>
+
+          <a href="#projects" class="btn-cli btn-primary">
+            ./view_projects.sh
+          </a>
+
+          <a
+            href="https://www.linkedin.com/in/joshuabarrus/"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="btn-cli"
+          >
+            linkedin --connect ↗
+          </a>
+
         </div>
+
       </div>
+
     </div>
 
+
     <div class="metrics-bar">
+
       <div class="metric-cell">
         <div class="metric-label">National Cyber League</div>
         <div class="metric-val">26th / 6,973</div>
         <div class="metric-sub">Top 0.4% Nationally (3,000/3,000 pts)</div>
       </div>
+
       <div class="metric-cell">
         <div class="metric-label">Academic Standing</div>
         <div class="metric-val">4.0 GPA</div>
         <div class="metric-sub">B.S. Cybersecurity ('28)</div>
       </div>
+
       <div class="metric-cell">
         <div class="metric-label">Industry Cert</div>
         <div class="metric-val">Security+</div>
         <div class="metric-sub">CompTIA Certified</div>
       </div>
+
       <div class="metric-cell">
         <div class="metric-label">Mentorship</div>
         <div class="metric-val">CrowdStrike</div>
         <div class="metric-sub">Selected Cohort 2025</div>
       </div>
+
     </div>
+
   </div>
+
 
   <!-- Focus Section -->
+
   <div class="tui-section" id="focus">
+
     <div class="section-header">
+
       <div class="section-header-title">
-        <span class="prompt-char">#</span> CAT continuous_development.log
+        <span class="prompt-char">#</span>
+        CAT continuous_development.log
       </div>
-      <span class="status-badge">ACTIVE THREADS: 3</span>
+
+      <span class="status-badge">
+        ACTIVE THREADS: 3
+      </span>
+
     </div>
+
+
     <div class="section-body">
+
       <div class="grid-3">
+
         <div class="panel-card">
-          <div class="card-idx">[THREAD 01]</div>
-          <div class="card-title">Web App Exploitation & Security</div>
-          <div class="card-desc">Working through PortSwigger Web Security Academy labs, practicing web application exploitation through CTF challenges, and learning secure web application development practices.</div>
+
+          <div class="card-idx">
+            [THREAD 01]
+          </div>
+
+          <div class="card-title">
+            Web App Exploitation & Security
+          </div>
+
+          <div class="card-desc">
+            Working through PortSwigger Web Security Academy labs, practicing web application exploitation through CTF challenges, and learning secure web application development practices.
+          </div>
+
         </div>
+
+
         <div class="panel-card">
-          <div class="card-idx">[THREAD 02]</div>
-          <div class="card-title">Python & C++ Development</div>
-          <div class="card-desc">Refreshing my Python knowledge and learning C++ to strengthen my understanding of applications, improve my ability to analyze and secure code, and build a stronger foundation.</div>
+
+          <div class="card-idx">
+            [THREAD 02]
+          </div>
+
+          <div class="card-title">
+            Python & C++ Development
+          </div>
+
+          <div class="card-desc">
+            Refreshing my Python knowledge and learning C++ to strengthen my understanding of applications, improve my ability to analyze and secure code, and build a stronger foundation.
+          </div>
+
         </div>
+
+
         <div class="panel-card">
-          <div class="card-idx">[THREAD 03]</div>
-          <div class="card-title">CTF Skill Development</div>
-          <div class="card-desc">Expanding my experience across many CTF platforms and competitions to improve my technical skills, problem-solving ability, and performance across challenge categories.</div>
+
+          <div class="card-idx">
+            [THREAD 03]
+          </div>
+
+          <div class="card-title">
+            CTF Skill Development
+          </div>
+
+          <div class="card-desc">
+            Expanding my experience across many CTF platforms and competitions to improve my technical skills, problem-solving ability, and performance across challenge categories.
+          </div>
+
         </div>
+
       </div>
+
     </div>
+
   </div>
 
+
   <!-- Projects Section -->
+
   <div class="tui-section" id="projects">
 
     <div class="section-header">
 
       <div class="section-header-title">
-        <span class="prompt-char">#</span> LS -LA ./projects/
+        <span class="prompt-char">#</span>
+        LS -LA ./projects/
       </div>
 
-      <span class="tag-item">COUNT: 3</span>
+      <span class="tag-item">
+        COUNT: 4
+      </span>
 
     </div>
+
 
     <div class="section-body">
 
       <div class="grid-2">
 
+
         <!-- NCL PROJECT -->
 
         <div class="panel-card">
 
-          <div class="card-idx">CYBERSECURITY COMPETITION</div>
+          <div class="card-idx">
+            CYBERSECURITY COMPETITION
+          </div>
 
           <div class="card-title">
             National Cyber League Individual Game CTF
           </div>
 
           <div class="card-desc">
-            Ranked 26th out of 6,973 competitors in the Spring 2026 Individual Game, achieving a perfect 3,000/3,000 score and placing in the top 0.4% nationally. Tested across web exploitation, reverse engineering, cryptography, password cracking, and recon.
+            Ranked 26th out of 6,973 competitors in the Spring 2026 Individual Game, achieving a perfect 3,000/3,000 score and placing in the top 0.4% nationally. Tested across web exploitation, reverse engineering, cryptography, password cracking, and reconnaissance.
           </div>
 
           <div class="tag-list">
@@ -593,11 +750,17 @@
 
           <div style="margin-top: 1rem; display: flex; justify-content: space-between; align-items: center;">
 
-            <button onclick="document.getElementById('modal').classList.add('active')" class="btn-cli" style="cursor: pointer;">
+            <button
+              onclick="document.getElementById('modal').classList.add('active')"
+              class="btn-cli"
+              style="cursor: pointer;"
+            >
               ./read_debrief.sh
             </button>
 
-            <span class="tag-item">SPRING 2026</span>
+            <span class="tag-item">
+              SPRING 2026
+            </span>
 
           </div>
 
@@ -608,7 +771,9 @@
 
         <div class="panel-card">
 
-          <div class="card-idx">ACADEMIC SECURITY PROJECT</div>
+          <div class="card-idx">
+            ACADEMIC SECURITY PROJECT
+          </div>
 
           <div class="card-title">
             Ransomware Simulation
@@ -628,18 +793,109 @@
 
           <div style="margin-top: 1rem; display: flex; justify-content: space-between; align-items: center;">
 
-            <button onclick="document.getElementById('ransomware-modal').classList.add('active')" class="btn-cli" style="cursor: pointer;">
+            <button
+              onclick="document.getElementById('ransomware-modal').classList.add('active')"
+              class="btn-cli"
+              style="cursor: pointer;"
+            >
               ./read_debrief.sh
             </button>
 
-            <span class="tag-item">ACADEMIC PROJECT</span>
+            <span class="tag-item">
+              ACADEMIC PROJECT
+            </span>
 
           </div>
 
         </div>
 
+
+        <!-- VULNERABILITY ANALYSIS PROJECT -->
+
+        <div class="panel-card">
+
+          <div class="card-idx">
+            PYTHON SECURITY TOOL
+          </div>
+
+          <div class="card-title">
+            Vulnerability Analysis & Reporting Tool
+          </div>
+
+          <div class="card-desc">
+            Developed a Python-based security assessment tool that automates Nmap and Nikto scans, parses XML/JSON scan results, and generates structured reports. Implemented analysis rules to identify potentially risky services, exposed attack surfaces, outdated software indicators, and common web security misconfigurations.
+          </div>
+
+          <div class="tag-list">
+            <span class="tag-item">Python</span>
+            <span class="tag-item">Nmap</span>
+            <span class="tag-item">Nikto</span>
+            <span class="tag-item">XML / JSON</span>
+            <span class="tag-item">Automation</span>
+            <span class="tag-item">Reporting</span>
+          </div>
+
+          <div style="margin-top: 1rem; display: flex; justify-content: space-between; align-items: center;">
+
+            <button
+              onclick="document.getElementById('vulnerability-modal').classList.add('active')"
+              class="btn-cli"
+              style="cursor: pointer;"
+            >
+              ./read_debrief.sh
+            </button>
+
+            <span class="tag-item">
+              PYTHON PROJECT
+            </span>
+
+          </div>
+
+        </div>
+
+
+        <!-- PORTSWIGGER PROJECT -->
+
+        <div class="panel-card" style="border-style: dashed;">
+
+          <div class="card-idx">
+            WEB APPLICATION SECURITY
+          </div>
+
+          <div class="card-title">
+            PortSwigger Web Security Academy
+          </div>
+
+          <div class="card-desc">
+            Work in progress. Completing hands-on web application security labs to develop practical experience with common vulnerability classes, reconnaissance, exploitation techniques, and defensive remediation.
+          </div>
+
+          <div class="tag-list">
+            <span class="tag-item">PortSwigger</span>
+            <span class="tag-item">Burp Suite</span>
+            <span class="tag-item">Web Security</span>
+            <span class="tag-item">AppSec</span>
+          </div>
+
+          <div style="margin-top: 1rem; display: flex; justify-content: space-between; align-items: center;">
+
+            <span class="status-badge">
+              IN PROGRESS
+            </span>
+
+            <span class="tag-item">
+              LEARNING PROJECT
+            </span>
+
+          </div>
+
+        </div>
+
+
       </div>
+
     </div>
+
   </div>
 
 
@@ -650,12 +906,16 @@
     <div class="section-header">
 
       <div class="section-header-title">
-        <span class="prompt-char">#</span> TAIL -F ./lab_writeups/*.md
+        <span class="prompt-char">#</span>
+        TAIL -F ./lab_writeups/*.md
       </div>
 
-      <span class="status-badge">STAGING</span>
+      <span class="status-badge">
+        STAGING
+      </span>
 
     </div>
+
 
     <div class="section-body">
 
@@ -663,7 +923,9 @@
 
         <div class="panel-card" style="border-style: dashed;">
 
-          <div class="card-idx">PORTSWIGGER ACADEMY</div>
+          <div class="card-idx">
+            PORTSWIGGER ACADEMY
+          </div>
 
           <div class="card-title">
             Web Application Security Writeups
@@ -684,7 +946,9 @@
 
         <div class="panel-card" style="border-style: dashed;">
 
-          <div class="card-idx">CTF PRACTICE</div>
+          <div class="card-idx">
+            CTF PRACTICE
+          </div>
 
           <div class="card-title">
             CTF Walkthroughs & Reflections
@@ -703,7 +967,9 @@
         </div>
 
       </div>
+
     </div>
+
   </div>
 
 
@@ -714,16 +980,21 @@
     <div class="section-header">
 
       <div class="section-header-title">
-        <span class="prompt-char">#</span> CAT /etc/capabilities.d/*
+        <span class="prompt-char">#</span>
+        CAT /etc/capabilities.d/*
       </div>
 
-      <span class="tag-item">LOADED</span>
+      <span class="tag-item">
+        LOADED
+      </span>
 
     </div>
+
 
     <div class="section-body">
 
       <div class="skills-wrapper">
+
 
         <div class="skills-col">
 
@@ -799,6 +1070,7 @@
             <span class="tag-item">Wireshark</span>
             <span class="tag-item">Burp Suite</span>
             <span class="tag-item">Nessus</span>
+            <span class="tag-item">Nikto</span>
             <span class="tag-item">Security Onion</span>
             <span class="tag-item">Elastic</span>
             <span class="tag-item">tcpdump</span>
@@ -810,10 +1082,13 @@
             <span class="tag-item">pfSense</span>
 
           </div>
+
         </div>
 
       </div>
+
     </div>
+
   </div>
 
 
@@ -824,12 +1099,16 @@
     <div class="section-header">
 
       <div class="section-header-title">
-        <span class="prompt-char">#</span> NETCAT -LVNP 2026 // GET IN TOUCH
+        <span class="prompt-char">#</span>
+        NETCAT -LVNP 2026 // GET IN TOUCH
       </div>
 
-      <span class="status-badge">LISTENING</span>
+      <span class="status-badge">
+        LISTENING
+      </span>
 
     </div>
+
 
     <div class="section-body" style="text-align: center; padding: 2rem 1rem;">
 
@@ -845,34 +1124,41 @@
         joshuabarrus2006@gmail.com
       </div>
 
+
       <div class="cli-actions" style="justify-content: center;">
 
-        <a href="mailto:joshuabarrus2006@gmail.com" class="btn-cli btn-primary">
+        <a
+          href="mailto:joshuabarrus2006@gmail.com"
+          class="btn-cli btn-primary"
+        >
           mailx -s "Hello" joshua
         </a>
 
-        <a href="https://github.com/JoshuaB978" target="_blank" rel="noopener noreferrer" class="btn-cli">
-          github.com/JoshuaB978
-        </a>
-
-        <a href="https://www.linkedin.com/in/joshuabarrus/" target="_blank" rel="noopener noreferrer" class="btn-cli">
+        <a
+          href="https://www.linkedin.com/in/joshuabarrus/"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="btn-cli"
+        >
           linkedin/in/joshuabarrus
         </a>
 
       </div>
 
     </div>
+
   </div>
 
 
   <div class="tui-footer">
 
     <div>
-      SYSTEM: JOSHUA_BARRUS_PORTFOLIO // v2.6.0
+      SYSTEM: JOSHUA_BARRUS_PORTFOLIO // v2.7.0
     </div>
 
     <div>
-      SESSION ID: <span id="sessYear"></span>_SEC_SHELL
+      SESSION ID:
+      <span id="sessYear"></span>_SEC_SHELL
     </div>
 
   </div>
@@ -882,17 +1168,24 @@
 
 <!-- NCL Debrief Modal -->
 
-<div class="modal-overlay" id="modal" onclick="if(event.target===this) this.classList.remove('active')">
+<div
+  class="modal-overlay"
+  id="modal"
+  onclick="if(event.target===this) this.classList.remove('active')"
+>
 
   <div class="tui-modal">
 
     <div class="window-bar">
 
-      <span>DEBRIEF: NCL_SPRING_2026.TXT</span>
+      <span>
+        DEBRIEF: NCL_SPRING_2026.TXT
+      </span>
 
       <button
         onclick="document.getElementById('modal').classList.remove('active')"
-        style="background:none; border:none; color:var(--text); cursor:pointer; font-family:var(--font-mono);">
+        style="background:none; border:none; color:var(--text); cursor:pointer; font-family:var(--font-mono);"
+      >
         [X CLOSE]
       </button>
 
@@ -905,8 +1198,10 @@
         National Cyber League Individual Game CTF
       </div>
 
+
       <div style="background: var(--bg-subtle); border-left: 3px solid var(--green); padding: 0.75rem; margin-bottom: 1rem; font-size: 0.85rem;">
-        <strong>Result:</strong> 26th out of 6,973 competitors (Top 0.4%), with a perfect 3,000/3,000 score.
+        <strong>Result:</strong>
+        26th out of 6,973 competitors (Top 0.4%), with a perfect 3,000/3,000 score.
       </div>
 
 
@@ -983,17 +1278,24 @@
 
 <!-- Ransomware Simulation Debrief Modal -->
 
-<div class="modal-overlay" id="ransomware-modal" onclick="if(event.target===this) this.classList.remove('active')">
+<div
+  class="modal-overlay"
+  id="ransomware-modal"
+  onclick="if(event.target===this) this.classList.remove('active')"
+>
 
   <div class="tui-modal">
 
     <div class="window-bar">
 
-      <span>DEBRIEF: RANSOMWARE_SIMULATION.TXT</span>
+      <span>
+        DEBRIEF: RANSOMWARE_SIMULATION.TXT
+      </span>
 
       <button
         onclick="document.getElementById('ransomware-modal').classList.remove('active')"
-        style="background:none; border:none; color:var(--text); cursor:pointer; font-family:var(--font-mono);">
+        style="background:none; border:none; color:var(--text); cursor:pointer; font-family:var(--font-mono);"
+      >
         [X CLOSE]
       </button>
 
@@ -1008,7 +1310,8 @@
 
 
       <div style="background: var(--bg-subtle); border-left: 3px solid var(--green); padding: 0.75rem; margin-bottom: 1rem; font-size: 0.85rem;">
-        <strong>Context:</strong> University cybersecurity project developed and tested exclusively in an isolated virtual machine environment.
+        <strong>Context:</strong>
+        University cybersecurity project developed and tested exclusively in an isolated virtual machine environment.
       </div>
 
 
@@ -1094,7 +1397,135 @@
 </div>
 
 
+<!-- Vulnerability Analysis Tool Debrief Modal -->
+
+<div
+  class="modal-overlay"
+  id="vulnerability-modal"
+  onclick="if(event.target===this) this.classList.remove('active')"
+>
+
+  <div class="tui-modal">
+
+    <div class="window-bar">
+
+      <span>
+        DEBRIEF: VULNERABILITY_ANALYSIS.TXT
+      </span>
+
+      <button
+        onclick="document.getElementById('vulnerability-modal').classList.remove('active')"
+        style="background:none; border:none; color:var(--text); cursor:pointer; font-family:var(--font-mono);"
+      >
+        [X CLOSE]
+      </button>
+
+    </div>
+
+
+    <div style="padding: 1.5rem; max-height: 80vh; overflow-y: auto;">
+
+      <div style="color: var(--green); font-size: 1.1rem; font-weight: 700; margin-bottom: 0.5rem;">
+        Vulnerability Analysis & Reporting Tool
+      </div>
+
+
+      <div style="background: var(--bg-subtle); border-left: 3px solid var(--green); padding: 0.75rem; margin-bottom: 1rem; font-size: 0.85rem;">
+        <strong>Purpose:</strong>
+        Python-based security assessment and reporting tool designed to make vulnerability assessment results easier to collect, normalize, analyze, and review.
+      </div>
+
+
+      <div style="margin-bottom: 1rem;">
+
+        <h4 style="color: var(--cyan); font-size: 0.9rem;">
+          › Scan Automation
+        </h4>
+
+        <p style="font-size: 0.82rem; color: var(--text);">
+          Built a command-line interface that can launch Nmap and Nikto scans with configurable scan types, targets, ports, and output options. Scan results are saved for later analysis rather than requiring the results to be manually reviewed after every scan.
+        </p>
+
+      </div>
+
+
+      <div style="margin-bottom: 1rem;">
+
+        <h4 style="color: var(--cyan); font-size: 0.9rem;">
+          › Result Parsing & Normalization
+        </h4>
+
+        <p style="font-size: 0.82rem; color: var(--text);">
+          Implemented parsers for Nmap XML and Nikto XML/JSON output and normalized the results into a common data structure containing hosts, ports, services, and findings.
+        </p>
+
+      </div>
+
+
+      <div style="margin-bottom: 1rem;">
+
+        <h4 style="color: var(--cyan); font-size: 0.9rem;">
+          › Automated Analysis
+        </h4>
+
+        <p style="font-size: 0.82rem; color: var(--text);">
+          Implemented heuristic analysis rules to identify potentially risky services, legacy services, exposed attack surface, service versions requiring further vulnerability review, and common web security misconfigurations.
+        </p>
+
+      </div>
+
+
+      <div style="margin-bottom: 1rem;">
+
+        <h4 style="color: var(--cyan); font-size: 0.9rem;">
+          › Reporting & Search
+        </h4>
+
+        <p style="font-size: 0.82rem; color: var(--text);">
+          Built command-line reporting and search functionality with severity filtering, text and regular-expression search, sorting, and Markdown report generation.
+        </p>
+
+      </div>
+
+
+      <div style="margin-bottom: 1rem;">
+
+        <h4 style="color: var(--cyan); font-size: 0.9rem;">
+          › Architecture
+        </h4>
+
+        <p style="font-size: 0.82rem; color: var(--text);">
+          The project is organized as a pipeline: scan execution → result parsing → data normalization → automated analysis → risk classification → reporting and search.
+        </p>
+
+      </div>
+
+
+      <div style="background: var(--bg-subtle); border-left: 3px solid var(--amber); padding: 0.75rem; font-size: 0.8rem;">
+
+        <strong style="color: var(--amber);">
+          NOTE:
+        </strong>
+
+        The tool uses Nmap and Nikto for scanning. Its analysis component applies heuristic rules to scan results and is intended to assist with review rather than replace dedicated vulnerability scanners or manual validation.
+
+      </div>
+
+    </div>
+
+  </div>
+
+</div>
+
+
 <script>
+
+  // Always return to the top of the page when refreshing/reloading.
+  history.scrollRestoration = "manual";
+
+  window.addEventListener("load", function () {
+    window.scrollTo(0, 0);
+  });
 
   document.getElementById('sessYear').textContent = new Date().getFullYear();
 
