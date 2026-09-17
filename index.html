@@ -26,6 +26,7 @@
     }
 
     * { box-sizing: border-box; margin: 0; padding: 0; }
+
     html {
       scroll-behavior: smooth;
       scroll-restoration: manual;
@@ -634,7 +635,7 @@
       </div>
 
       <span class="status-badge">
-        ACTIVE THREADS: 3
+        ACTIVE THREADS: 4
       </span>
 
     </div>
@@ -642,7 +643,7 @@
 
     <div class="section-body">
 
-      <div class="grid-3">
+      <div class="grid-2">
 
         <div class="panel-card">
 
@@ -689,7 +690,24 @@
           </div>
 
           <div class="card-desc">
-            Expanding my experience across many CTF platforms and competitions to improve my technical skills, problem-solving ability, and performance across challenge categories.
+            Expanding my experience across CTF platforms and competitions to improve my technical skills, problem-solving ability, and performance across different security challenge categories.
+          </div>
+
+        </div>
+
+
+        <div class="panel-card">
+
+          <div class="card-idx">
+            [THREAD 04]
+          </div>
+
+          <div class="card-title">
+            LLM Security & AI Red Teaming
+          </div>
+
+          <div class="card-desc">
+            Exploring security testing methodologies for large language models through adversarial testing, automated evaluation, evidence collection, and structured analysis of model behavior.
           </div>
 
         </div>
@@ -724,42 +742,39 @@
       <div class="grid-2">
 
 
-        <!-- NCL PROJECT -->
+        <!-- LLM SECURITY TESTING PROJECT -->
 
-        <div class="panel-card">
+        <div class="panel-card" style="border-style: dashed;">
 
           <div class="card-idx">
-            CYBERSECURITY COMPETITION
+            LLM SECURITY PROJECT
           </div>
 
           <div class="card-title">
-            National Cyber League Individual Game CTF
+            LLM Security Testing & Red Teaming
           </div>
 
           <div class="card-desc">
-            Ranked 26th out of 6,973 competitors in the Spring 2026 Individual Game, achieving a perfect 3,000/3,000 score and placing in the top 0.4% nationally. Tested across web exploitation, reverse engineering, cryptography, password cracking, and reconnaissance.
+            Using Garak and PyRIT to run automated injection and jailbreak probes against large language models, capturing evidence from single-turn scans and multi-turn escalation attacks. Findings are being scored, cataloged, and mapped to the OWASP Top 10 for LLM Applications.
           </div>
 
           <div class="tag-list">
-            <span class="tag-item">Web Exploitation</span>
-            <span class="tag-item">Ghidra</span>
-            <span class="tag-item">Nmap</span>
-            <span class="tag-item">Binary Ninja</span>
-            <span class="tag-item">Cryptography</span>
+            <span class="tag-item">LLM Security</span>
+            <span class="tag-item">AI Red Teaming</span>
+            <span class="tag-item">Garak</span>
+            <span class="tag-item">PyRIT</span>
+            <span class="tag-item">OWASP</span>
+            <span class="tag-item">Python</span>
           </div>
 
           <div style="margin-top: 1rem; display: flex; justify-content: space-between; align-items: center;">
 
-            <button
-              onclick="document.getElementById('modal').classList.add('active')"
-              class="btn-cli"
-              style="cursor: pointer;"
-            >
-              ./read_debrief.sh
-            </button>
+            <span class="status-badge">
+              IN PROGRESS
+            </span>
 
             <span class="tag-item">
-              SPRING 2026
+              SECURITY RESEARCH
             </span>
 
           </div>
@@ -1159,116 +1174,6 @@
     <div>
       SESSION ID:
       <span id="sessYear"></span>_SEC_SHELL
-    </div>
-
-  </div>
-
-</div>
-
-
-<!-- NCL Debrief Modal -->
-
-<div
-  class="modal-overlay"
-  id="modal"
-  onclick="if(event.target===this) this.classList.remove('active')"
->
-
-  <div class="tui-modal">
-
-    <div class="window-bar">
-
-      <span>
-        DEBRIEF: NCL_SPRING_2026.TXT
-      </span>
-
-      <button
-        onclick="document.getElementById('modal').classList.remove('active')"
-        style="background:none; border:none; color:var(--text); cursor:pointer; font-family:var(--font-mono);"
-      >
-        [X CLOSE]
-      </button>
-
-    </div>
-
-
-    <div style="padding: 1.5rem; max-height: 80vh; overflow-y: auto;">
-
-      <div style="color: var(--green); font-size: 1.1rem; font-weight: 700; margin-bottom: 0.5rem;">
-        National Cyber League Individual Game CTF
-      </div>
-
-
-      <div style="background: var(--bg-subtle); border-left: 3px solid var(--green); padding: 0.75rem; margin-bottom: 1rem; font-size: 0.85rem;">
-        <strong>Result:</strong>
-        26th out of 6,973 competitors (Top 0.4%), with a perfect 3,000/3,000 score.
-      </div>
-
-
-      <div style="margin-bottom: 1rem;">
-
-        <h4 style="color: var(--cyan); font-size: 0.9rem;">
-          › Problem-Solving
-        </h4>
-
-        <p style="font-size: 0.82rem; color: var(--text);">
-          Worked through unfamiliar technical challenges under competition constraints by identifying relevant information, testing possible solutions, and adjusting my approach when initial attempts were unsuccessful.
-        </p>
-
-      </div>
-
-
-      <div style="margin-bottom: 1rem;">
-
-        <h4 style="color: var(--cyan); font-size: 0.9rem;">
-          › Web Application Exploitation
-        </h4>
-
-        <p style="font-size: 0.82rem; color: var(--text);">
-          Gained experience practicing reconnaissance, identifying recurring vulnerability patterns, and exploiting vulnerabilities presented in web application challenges.
-        </p>
-
-      </div>
-
-
-      <div style="margin-bottom: 1rem;">
-
-        <h4 style="color: var(--cyan); font-size: 0.9rem;">
-          › Enumeration & Exploitation
-        </h4>
-
-        <p style="font-size: 0.82rem; color: var(--text);">
-          Analyzed different types of scripts, identified weaknesses in their behavior or implementation, and determined how those weaknesses could be exploited.
-        </p>
-
-      </div>
-
-
-      <div style="margin-bottom: 1rem;">
-
-        <h4 style="color: var(--cyan); font-size: 0.9rem;">
-          › Reverse Engineering
-        </h4>
-
-        <p style="font-size: 0.82rem; color: var(--text);">
-          Used Binary Ninja and Ghidra to examine program behavior and support the reverse-engineering process during competition challenges.
-        </p>
-
-      </div>
-
-
-      <div>
-
-        <h4 style="color: var(--cyan); font-size: 0.9rem;">
-          › Scanning & Reconnaissance
-        </h4>
-
-        <p style="font-size: 0.82rem; color: var(--text);">
-          Used Nmap and other tools to identify systems, enumerate available information, and collect the details needed to approach later challenges.
-        </p>
-
-      </div>
-
     </div>
 
   </div>
