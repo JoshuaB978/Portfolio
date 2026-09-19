@@ -26,12 +26,7 @@
     }
 
     * { box-sizing: border-box; margin: 0; padding: 0; }
-
-    html {
-      scroll-behavior: smooth;
-      scroll-restoration: manual;
-    }
-
+    html { scroll-behavior: smooth; }
     body {
       background-color: var(--bg);
       color: var(--text);
@@ -39,7 +34,7 @@
       font-size: 14px;
       line-height: 1.6;
       min-height: 100vh;
-      background-image:
+      background-image: 
         linear-gradient(rgba(0, 255, 102, 0.02) 1px, transparent 1px),
         linear-gradient(90deg, rgba(0, 255, 102, 0.02) 1px, transparent 1px);
       background-size: 24px 24px;
@@ -52,7 +47,6 @@
     }
 
     /* Top Bar & TUI Header */
-
     .tui-header {
       border: 1px solid var(--border);
       background: var(--bg-panel);
@@ -84,7 +78,6 @@
       border-radius: 50%;
       display: inline-block;
     }
-
     .dot-red { background: #ff5f56; }
     .dot-yellow { background: #ffbd2e; }
     .dot-green { background: #27c93f; }
@@ -108,19 +101,16 @@
       gap: 0.4rem;
     }
 
-    .nav-tab:hover,
-    .nav-tab.active {
+    .nav-tab:hover, .nav-tab.active {
       background: var(--bg-panel);
       color: var(--green);
     }
 
     /* Shell Prompt Styles */
-
     .prompt {
       color: var(--green);
       font-weight: 600;
     }
-
     .prompt-path { color: var(--cyan); }
     .prompt-char { color: var(--amber); }
 
@@ -135,7 +125,6 @@
     }
 
     /* Hero Grid */
-
     .hero-grid {
       display: grid;
       grid-template-columns: 140px 1fr;
@@ -243,7 +232,6 @@
     }
 
     /* Telemetry / Metrics Bar */
-
     .metrics-bar {
       display: grid;
       grid-template-columns: repeat(4, 1fr);
@@ -278,7 +266,6 @@
     }
 
     /* Section Wrapper */
-
     .tui-section {
       border: 1px solid var(--border);
       background: var(--bg-panel);
@@ -310,7 +297,6 @@
     }
 
     /* Cards & Grids */
-
     .grid-3 {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
@@ -355,7 +341,6 @@
     }
 
     /* Tags */
-
     .tag-list {
       display: flex;
       flex-wrap: wrap;
@@ -381,7 +366,6 @@
     }
 
     /* Skills CLI Table */
-
     .skills-wrapper {
       display: grid;
       grid-template-columns: repeat(2, 1fr);
@@ -407,7 +391,6 @@
       align-items: center;
       gap: 0.4rem;
     }
-
     .skills-col li::before {
       content: "›";
       color: var(--amber);
@@ -422,7 +405,6 @@
     }
 
     /* Modal */
-
     .modal-overlay {
       position: fixed;
       inset: 0;
@@ -433,11 +415,7 @@
       justify-content: center;
       padding: 1rem;
     }
-
-    .modal-overlay.active {
-      display: flex;
-    }
-
+    .modal-overlay.active { display: flex; }
     .tui-modal {
       width: min(720px, 100%);
       background: var(--bg-panel);
@@ -446,7 +424,6 @@
     }
 
     /* Footer */
-
     .tui-footer {
       border: 1px solid var(--border);
       background: #080c12;
@@ -457,77 +434,38 @@
       font-size: 0.75rem;
       color: var(--text-dim);
     }
-
-    .tui-footer a {
-      color: var(--green);
-      text-decoration: none;
-    }
+    .tui-footer a { color: var(--green); text-decoration: none; }
 
     @media (max-width: 800px) {
-      .hero-grid {
-        grid-template-columns: 1fr;
-      }
-
-      .metrics-bar {
-        grid-template-columns: repeat(2, 1fr);
-      }
-
-      .grid-3,
-      .grid-2,
-      .skills-wrapper {
-        grid-template-columns: 1fr;
-      }
-
-      .tools-tag-cloud {
-        grid-column: span 1;
-      }
+      .hero-grid { grid-template-columns: 1fr; }
+      .metrics-bar { grid-template-columns: repeat(2, 1fr); }
+      .grid-3, .grid-2, .skills-wrapper { grid-template-columns: 1fr; }
+      .tools-tag-cloud { grid-column: span 1; }
     }
   </style>
 </head>
-
 <body>
 
 <div class="container">
-
   <div class="tui-header">
-
     <div class="window-bar">
       <div class="window-dots">
         <span class="dot dot-red"></span>
         <span class="dot dot-yellow"></span>
         <span class="dot dot-green"></span>
       </div>
-
       <div>bash - joshua@sec: /home/joshua/portfolio</div>
-
       <div>SSH: 22/tcp [CONNECTED]</div>
     </div>
 
-
     <div class="nav-tabs">
-
-      <a href="#about" class="nav-tab active">
-        <span>[1]</span> bio.sh
-      </a>
-
-      <a href="#focus" class="nav-tab">
-        <span>[2]</span> continuous_dev.log
-      </a>
-
-      <a href="#projects" class="nav-tab">
-        <span>[3]</span> projects/
-      </a>
-
-      <a href="#skills" class="nav-tab">
-        <span>[4]</span> capabilities.cfg
-      </a>
-
-      <a href="#contact" class="nav-tab">
-        <span>[5]</span> contact.init
-      </a>
-
+      <a href="#about" class="nav-tab active"><span>[1]</span> bio.sh</a>
+      <a href="#focus" class="nav-tab"><span>[2]</span> continuous_dev.log</a>
+      <a href="#projects" class="nav-tab"><span>[3]</span> projects/</a>
+      <a href="#writeups" class="nav-tab"><span>[4]</span> writeups.md</a>
+      <a href="#skills" class="nav-tab"><span>[5]</span> capabilities.cfg</a>
+      <a href="#contact" class="nav-tab"><span>[6]</span> contact.init</a>
     </div>
-
 
     <pre class="ascii-banner">
      ██╗██████╗  █████╗ ██████╗ ██████╗ ██╗   ██╗███████╗
@@ -535,16 +473,15 @@
      ██║██████╔╝███████║██████╔╝██████╔╝██║   ██║███████╗
 ██   ██║██╔══██╗██╔══██║██╔══██╗██╔══██╗██║   ██║╚════██║
 ╚█████╔╝██████╔╝██║  ██║██║  ██║██║  ██║╚██████╔╝███████║
- ╚════╝ ╚═════╝ ╚═╝  ╚═╝╚═╝  ╚═╝╚═╝  ╚═╝ ╚══════╝ ╚══════╝
- [CYBERSECURITY STUDENT]
+ ╚════╝ ╚═════╝ ╚═╝  ╚═╝╚═╝  ╚═╝╚═╝  ╚═╝ ╚═════╝ ╚══════╝
+ 
+ [CYBERSECURITY STUDENT // OFFENSIVE SECURITY]
     </pre>
-
 
     <div class="hero-grid" id="about">
 
       <div class="avatar-frame">
         <div class="avatar-fallback">JB</div>
-
         <img
           src="profile.jpg"
           alt="Joshua Barrus"
@@ -552,7 +489,6 @@
           onerror="this.style.display='none'"
         >
       </div>
-
 
       <div class="hero-text">
 
@@ -569,13 +505,10 @@
           I’m a cybersecurity student at Anderson University pursuing internship opportunities in security engineering, offensive security, and adjacent roles. After ranking 26th out of 6,973 competitors in the Spring 2026 National Cyber League Individual Game CTF, I’m continuing to build practical skills through competitions, coursework, programming, hands-on labs, and internship experience.
         </p>
 
-
         <div class="cli-actions">
-
           <a href="#projects" class="btn-cli btn-primary">
             ./view_projects.sh
           </a>
-
           <a
             href="https://www.linkedin.com/in/joshuabarrus/"
             target="_blank"
@@ -584,13 +517,19 @@
           >
             linkedin --connect ↗
           </a>
-
+          <a
+            href="https://github.com/JoshuaB978"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="btn-cli"
+          >
+            github --profile ↗
+          </a>
         </div>
 
       </div>
 
     </div>
-
 
     <div class="metrics-bar">
 
@@ -622,94 +561,69 @@
 
   </div>
 
-
   <!-- Focus Section -->
-
   <div class="tui-section" id="focus">
 
     <div class="section-header">
-
       <div class="section-header-title">
         <span class="prompt-char">#</span>
         CAT continuous_development.log
       </div>
-
       <span class="status-badge">
         ACTIVE THREADS: 4
       </span>
-
     </div>
-
 
     <div class="section-body">
 
       <div class="grid-2">
 
         <div class="panel-card">
-
           <div class="card-idx">
             [THREAD 01]
           </div>
-
           <div class="card-title">
             Web App Exploitation & Security
           </div>
-
           <div class="card-desc">
             Working through PortSwigger Web Security Academy labs, practicing web application exploitation through CTF challenges, and learning secure web application development practices.
           </div>
-
         </div>
 
-
         <div class="panel-card">
-
           <div class="card-idx">
             [THREAD 02]
           </div>
-
           <div class="card-title">
             Python & C++ Development
           </div>
-
           <div class="card-desc">
             Refreshing my Python knowledge and learning C++ to strengthen my understanding of applications, improve my ability to analyze and secure code, and build a stronger foundation.
           </div>
-
         </div>
 
-
         <div class="panel-card">
-
           <div class="card-idx">
             [THREAD 03]
           </div>
-
           <div class="card-title">
             CTF Skill Development
           </div>
-
           <div class="card-desc">
             Expanding my experience across CTF platforms and competitions to improve my technical skills, problem-solving ability, and performance across different security challenge categories.
           </div>
-
         </div>
 
-
         <div class="panel-card">
-
           <div class="card-idx">
             [THREAD 04]
           </div>
-
           <div class="card-title">
-            LLM Security & AI Red Teaming
+            LLM Red Teaming & AI Security
           </div>
-
           <div class="card-desc">
-            Exploring security testing methodologies for large language models through adversarial testing, automated evaluation, evidence collection, and structured analysis of model behavior.
+            Evaluating local open-weight models against adversarial prompt injection, encoding evasions, and system-prompt leakage using Garak and PyRIT. Currently expanding testbeds from single-turn baseline probes to multi-turn escalation strategies, automated LLM-assisted scoring, and agentic workflows.
           </div>
-
         </div>
 
       </div>
@@ -718,86 +632,66 @@
 
   </div>
 
-
   <!-- Projects Section -->
-
   <div class="tui-section" id="projects">
 
     <div class="section-header">
-
       <div class="section-header-title">
         <span class="prompt-char">#</span>
         LS -LA ./projects/
       </div>
-
       <span class="tag-item">
-        COUNT: 4
+        COUNT: 3
       </span>
-
     </div>
-
 
     <div class="section-body">
 
-      <div class="grid-2">
-
+      <div class="grid-3">
 
         <!-- LLM SECURITY TESTING PROJECT -->
-
-        <div class="panel-card" style="border-style: dashed;">
-
+        <div class="panel-card">
           <div class="card-idx">
-            LLM SECURITY PROJECT
+            OFFENSIVE AI & RED TEAMING
           </div>
-
           <div class="card-title">
-            LLM Security Testing & Red Teaming
+            Local LLM Vulnerability Assessment & Red Teaming
           </div>
-
           <div class="card-desc">
-            Using Garak and PyRIT to run automated injection and jailbreak probes against large language models, capturing evidence from single-turn scans and multi-turn escalation attacks. Findings are being scored, cataloged, and mapped to the OWASP Top 10 for LLM Applications.
+            Built an isolated red-teaming lab using Ollama, NVIDIA Garak, and Microsoft PyRIT to evaluate local LLMs against prompt injection, jailbreaks, and system-prompt extraction. Mapped observed telemetry to the OWASP Top 10 for LLM Applications.
           </div>
-
           <div class="tag-list">
-            <span class="tag-item">LLM Security</span>
-            <span class="tag-item">AI Red Teaming</span>
-            <span class="tag-item">Garak</span>
-            <span class="tag-item">PyRIT</span>
-            <span class="tag-item">OWASP</span>
+            <span class="tag-item">Ollama / Phi-4</span>
+            <span class="tag-item">NVIDIA Garak</span>
+            <span class="tag-item">Microsoft PyRIT</span>
+            <span class="tag-item">OWASP LLM01/07</span>
             <span class="tag-item">Python</span>
           </div>
-
           <div style="margin-top: 1rem; display: flex; justify-content: space-between; align-items: center;">
-
-            <span class="status-badge">
-              IN PROGRESS
+            <button
+              onclick="document.getElementById('llm-redteam-modal').classList.add('active')"
+              class="btn-cli"
+              style="cursor: pointer;"
+            >
+              ./read_debrief.sh
+            </button>
+            <span class="status-badge" style="border-color: var(--cyan); color: var(--cyan);">
+              ACTIVE RESEARCH
             </span>
-
-            <span class="tag-item">
-              SECURITY RESEARCH
-            </span>
-
           </div>
-
         </div>
 
-
         <!-- RANSOMWARE PROJECT -->
-
         <div class="panel-card">
-
           <div class="card-idx">
             ACADEMIC SECURITY PROJECT
           </div>
-
           <div class="card-title">
             Ransomware Simulation
           </div>
-
           <div class="card-desc">
             Developed a Python-based ransomware simulation in an isolated VM environment to explore AES-256 encryption, ECDH key exchange, HKDF, multithreaded file processing, and cryptographic key management.
           </div>
-
           <div class="tag-list">
             <span class="tag-item">Python</span>
             <span class="tag-item">Cryptography</span>
@@ -805,9 +699,7 @@
             <span class="tag-item">ECDH</span>
             <span class="tag-item">Multithreading</span>
           </div>
-
           <div style="margin-top: 1rem; display: flex; justify-content: space-between; align-items: center;">
-
             <button
               onclick="document.getElementById('ransomware-modal').classList.add('active')"
               class="btn-cli"
@@ -815,43 +707,31 @@
             >
               ./read_debrief.sh
             </button>
-
             <span class="tag-item">
               ACADEMIC PROJECT
             </span>
-
           </div>
-
         </div>
 
-
         <!-- VULNERABILITY ANALYSIS PROJECT -->
-
         <div class="panel-card">
-
           <div class="card-idx">
             PYTHON SECURITY TOOL
           </div>
-
           <div class="card-title">
             Vulnerability Analysis & Reporting Tool
           </div>
-
           <div class="card-desc">
-            Developed a Python-based security assessment tool that automates Nmap and Nikto scans, parses XML/JSON scan results, and generates structured reports. Implemented analysis rules to identify potentially risky services, exposed attack surfaces, outdated software indicators, and common web security misconfigurations.
+            Developed a Python-based security assessment tool that automates Nmap and Nikto scans, parses XML/JSON scan results, and generates structured reports. Implemented analysis rules to identify risky services and exposed attack surfaces.
           </div>
-
           <div class="tag-list">
             <span class="tag-item">Python</span>
             <span class="tag-item">Nmap</span>
             <span class="tag-item">Nikto</span>
             <span class="tag-item">XML / JSON</span>
-            <span class="tag-item">Automation</span>
             <span class="tag-item">Reporting</span>
           </div>
-
           <div style="margin-top: 1rem; display: flex; justify-content: space-between; align-items: center;">
-
             <button
               onclick="document.getElementById('vulnerability-modal').classList.add('active')"
               class="btn-cli"
@@ -859,53 +739,11 @@
             >
               ./read_debrief.sh
             </button>
-
             <span class="tag-item">
               PYTHON PROJECT
             </span>
-
           </div>
-
         </div>
-
-
-        <!-- PORTSWIGGER PROJECT -->
-
-        <div class="panel-card" style="border-style: dashed;">
-
-          <div class="card-idx">
-            WEB APPLICATION SECURITY
-          </div>
-
-          <div class="card-title">
-            PortSwigger Web Security Academy
-          </div>
-
-          <div class="card-desc">
-            Work in progress. Completing hands-on web application security labs to develop practical experience with common vulnerability classes, reconnaissance, exploitation techniques, and defensive remediation.
-          </div>
-
-          <div class="tag-list">
-            <span class="tag-item">PortSwigger</span>
-            <span class="tag-item">Burp Suite</span>
-            <span class="tag-item">Web Security</span>
-            <span class="tag-item">AppSec</span>
-          </div>
-
-          <div style="margin-top: 1rem; display: flex; justify-content: space-between; align-items: center;">
-
-            <span class="status-badge">
-              IN PROGRESS
-            </span>
-
-            <span class="tag-item">
-              LEARNING PROJECT
-            </span>
-
-          </div>
-
-        </div>
-
 
       </div>
 
@@ -913,72 +751,85 @@
 
   </div>
 
-
   <!-- Writeups -->
-
   <div class="tui-section" id="writeups">
 
     <div class="section-header">
-
       <div class="section-header-title">
         <span class="prompt-char">#</span>
-        TAIL -F ./lab_writeups/*.md
+        CAT ./lab_writeups/*.md
       </div>
-
       <span class="status-badge">
-        STAGING
+        DOCUMENTED LABS
       </span>
-
     </div>
-
 
     <div class="section-body">
 
       <div class="grid-2">
 
-        <div class="panel-card" style="border-style: dashed;">
-
+        <!-- WRITEUP 1 -->
+        <div class="panel-card">
           <div class="card-idx">
-            PORTSWIGGER ACADEMY
+            PORTSWIGGER ACADEMY // SERVER-SIDE
           </div>
-
           <div class="card-title">
-            Web Application Security Writeups
+            Path Traversal & Server-Side Request Forgery (SSRF)
           </div>
-
           <div class="card-desc">
-            Work in progress. Selected writeups from completed PortSwigger labs focusing on methodology, vulnerability patterns, exploitation techniques, and defensive remediation.
+            Technical walkthrough covering relative sequence filter evasions, absolute path traversals, null-byte bypasses, and multi-tier SSRF exploitation against internal cloud metadata and private network interfaces.
           </div>
-
           <div class="tag-list">
-            <span class="tag-item">PortSwigger</span>
-            <span class="tag-item">Web Security</span>
+            <span class="tag-item">Path Traversal</span>
+            <span class="tag-item">SSRF</span>
+            <span class="tag-item">Burp Intruder</span>
             <span class="tag-item">Remediation</span>
           </div>
-
+          <div style="margin-top: 1rem; display: flex; justify-content: space-between; align-items: center;">
+            <a
+              href="https://github.com/JoshuaB978/portswigger-web-security-labs/blob/main/server-side-vulnerabilities/path-traversal-and-ssrf.md"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="btn-cli btn-primary"
+            >
+              view_writeup.md ↗
+            </a>
+            <span class="tag-item">
+              GITHUB DOC
+            </span>
+          </div>
         </div>
 
-
-        <div class="panel-card" style="border-style: dashed;">
-
+        <!-- WRITEUP 2 -->
+        <div class="panel-card">
           <div class="card-idx">
-            CTF PRACTICE
+            PORTSWIGGER ACADEMY // SERVER-SIDE
           </div>
-
           <div class="card-title">
-            CTF Walkthroughs & Reflections
+            File Uploads, OS Command Injection & SQLi
           </div>
-
           <div class="card-desc">
-            Work in progress. Future entries documenting selected CTF challenges, reasoning used to approach them, lessons from unsuccessful attempts, and repeatable patterns.
+            Hands-on exploitation documentation detailing MIME-type bypasses for web shell uploads, shell metacharacter injection in backend parameters, and SQL query structure manipulation for authentication bypass and data exfiltration.
           </div>
-
           <div class="tag-list">
-            <span class="tag-item">CTFs</span>
-            <span class="tag-item">Problem-Solving</span>
-            <span class="tag-item">Learning Notes</span>
+            <span class="tag-item">File Upload</span>
+            <span class="tag-item">Command Injection</span>
+            <span class="tag-item">SQLi</span>
+            <span class="tag-item">Web Shells</span>
           </div>
-
+          <div style="margin-top: 1rem; display: flex; justify-content: space-between; align-items: center;">
+            <a
+              href="https://github.com/JoshuaB978/portswigger-web-security-labs/blob/main/server-side-vulnerabilities/file-uploads-command-sqli.md"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="btn-cli btn-primary"
+            >
+              view_writeup.md ↗
+            </a>
+            <span class="tag-item">
+              GITHUB DOC
+            </span>
+          </div>
         </div>
 
       </div>
@@ -987,34 +838,25 @@
 
   </div>
 
-
   <!-- Skills Section -->
-
   <div class="tui-section" id="skills">
 
     <div class="section-header">
-
       <div class="section-header-title">
         <span class="prompt-char">#</span>
         CAT /etc/capabilities.d/*
       </div>
-
       <span class="tag-item">
         LOADED
       </span>
-
     </div>
-
 
     <div class="section-body">
 
       <div class="skills-wrapper">
 
-
         <div class="skills-col">
-
           <h4>// SEC_ENGINEERING & GRC</h4>
-
           <ul>
             <li>Vulnerability Assessment</li>
             <li>Vulnerability Management</li>
@@ -1023,45 +865,34 @@
             <li>Security Compliance</li>
             <li>Network Security</li>
           </ul>
-
         </div>
 
-
         <div class="skills-col">
-
           <h4>// OFFENSIVE & APPSEC</h4>
-
           <ul>
+            <li>LLM Red Teaming & Prompt Injection</li>
             <li>Network Reconnaissance</li>
             <li>Network Enumeration</li>
             <li>Web Application Security</li>
             <li>Exploitation Fundamentals</li>
-            <li>Burp Suite</li>
-            <li>Nmap / Nessus</li>
+            <li>Burp Suite / Nmap / Nessus</li>
             <li>Wireshark / tcpdump</li>
           </ul>
-
         </div>
 
-
         <div class="skills-col">
-
           <h4>// SYSTEMS, PROTOCOLS & CODE</h4>
-
           <ul>
             <li>TCP/IP</li>
             <li>Linux</li>
             <li>Windows</li>
             <li>Python</li>
+            <li>PowerShell</li>
           </ul>
-
         </div>
 
-
         <div class="skills-col">
-
           <h4>// PROFESSIONAL & ANALYTICAL</h4>
-
           <ul>
             <li>Problem Solving</li>
             <li>Analytical Thinking</li>
@@ -1069,18 +900,16 @@
             <li>Communication</li>
             <li>Teamwork</li>
           </ul>
-
         </div>
 
-
         <div class="tools-tag-cloud">
-
           <h4 style="font-size: 0.8rem; color: var(--green); margin-bottom: 0.6rem;">
             // ARSENAL_AND_TOOLS
           </h4>
-
           <div class="tag-list">
-
+            <span class="tag-item">NVIDIA Garak</span>
+            <span class="tag-item">Microsoft PyRIT</span>
+            <span class="tag-item">Ollama</span>
             <span class="tag-item">Nmap</span>
             <span class="tag-item">Wireshark</span>
             <span class="tag-item">Burp Suite</span>
@@ -1095,9 +924,7 @@
             <span class="tag-item">Arkime</span>
             <span class="tag-item">tshark</span>
             <span class="tag-item">pfSense</span>
-
           </div>
-
         </div>
 
       </div>
@@ -1106,24 +933,18 @@
 
   </div>
 
-
   <!-- Contact -->
-
   <div class="tui-section" id="contact">
 
     <div class="section-header">
-
       <div class="section-header-title">
         <span class="prompt-char">#</span>
         NETCAT -LVNP 2026 // GET IN TOUCH
       </div>
-
       <span class="status-badge">
         LISTENING
       </span>
-
     </div>
-
 
     <div class="section-body" style="text-align: center; padding: 2rem 1rem;">
 
@@ -1139,292 +960,295 @@
         joshuabarrus2006@gmail.com
       </div>
 
-
       <div class="cli-actions" style="justify-content: center;">
-
         <a
           href="mailto:joshuabarrus2006@gmail.com"
           class="btn-cli btn-primary"
         >
           mailx -s "Hello" joshua
         </a>
-
         <a
           href="https://www.linkedin.com/in/joshuabarrus/"
           target="_blank"
           rel="noopener noreferrer"
           class="btn-cli"
         >
-          linkedin/in/joshuabarrus
+          linkedin/in/joshuabarrus ↗
         </a>
-
+        <a
+          href="https://github.com/JoshuaB978"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="btn-cli"
+        >
+          github/JoshuaB978 ↗
+        </a>
       </div>
 
     </div>
 
   </div>
 
-
   <div class="tui-footer">
-
     <div>
-      SYSTEM: JOSHUA_BARRUS_PORTFOLIO // v2.7.0
+      SYSTEM: JOSHUA_BARRUS_PORTFOLIO // v2.8.0
     </div>
-
     <div>
       SESSION ID:
       <span id="sessYear"></span>_SEC_SHELL
     </div>
-
   </div>
 
 </div>
 
+<!-- LLM Red Teaming Debrief Modal -->
+<div
+  class="modal-overlay"
+  id="llm-redteam-modal"
+  onclick="if(event.target===this) this.classList.remove('active')"
+>
+  <div class="tui-modal">
+    <div class="window-bar">
+      <span>DEBRIEF: LLM_RED_TEAMING.TXT</span>
+      <button
+        onclick="document.getElementById('llm-redteam-modal').classList.remove('active')"
+        style="background:none; border:none; color:var(--text); cursor:pointer; font-family:var(--font-mono);"
+      >
+        [X CLOSE]
+      </button>
+    </div>
+
+    <div style="padding: 1.5rem; max-height: 80vh; overflow-y: auto;">
+      <div style="color: var(--green); font-size: 1.1rem; font-weight: 700; margin-bottom: 0.5rem;">
+        Local LLM Vulnerability Assessment & Adversarial Red Teaming
+      </div>
+
+      <div style="background: var(--bg-subtle); border-left: 3px solid var(--green); padding: 0.75rem; margin-bottom: 1rem; font-size: 0.85rem;">
+        <strong>Context:</strong>
+        Ongoing independent cybersecurity research lab evaluating local open-weight model robustness against OWASP Top 10 for LLM Applications (2025).
+      </div>
+
+      <div style="margin-bottom: 1rem;">
+        <h4 style="color: var(--cyan); font-size: 0.9rem;">
+          › Target Architecture & Setup
+        </h4>
+        <p style="font-size: 0.82rem; color: var(--text);">
+          Deployed Microsoft's <strong>Phi-4 Mini</strong> locally using Ollama accelerated on an NVIDIA RTX 4060 GPU. Created a specialized model target (<code>phi4-redteam</code>) enforcing strict instruction precedence and embedding a unique synthetic canary token (<code>SYSTEM_CANARY=JOSHUA-LAB-7F2A</code>) to objectively evaluate system-prompt leakage.
+        </p>
+      </div>
+
+      <div style="margin-bottom: 1rem;">
+        <h4 style="color: var(--cyan); font-size: 0.9rem;">
+          › Automated Tooling & Probing Pipelines
+        </h4>
+        <p style="font-size: 0.82rem; color: var(--text); margin-bottom: 0.5rem;">
+          Integrated two distinct industry-standard red-teaming frameworks against Ollama's local endpoints:
+        </p>
+        <ul style="font-size: 0.82rem; color: var(--text); padding-left: 1.2rem; line-height: 1.5;">
+          <li><strong>NVIDIA Garak v0.17.0:</strong> Executed automated probe suites including DAN jailbreaks (<code>dan.Dan_11_0</code>) and large-scale textual obfuscation (<code>encoding.InjectZalgo</code>), recording 1,280 passing detector evaluations with 0 detected bypasses (100% Pass / DC-5).</li>
+          <li><strong>Microsoft PyRIT v1.1.0:</strong> Scripted automated asynchronous test campaigns using <code>PromptSendingAttack</code> and <code>OpenAIChatTarget</code> across four core adversarial objectives: direct override, authority impersonation, Base64 exfiltration, and developer-mode bypass.</li>
+        </ul>
+      </div>
+
+      <div style="margin-bottom: 1rem;">
+        <h4 style="color: var(--cyan); font-size: 0.9rem;">
+          › Findings & OWASP Risk Categorization
+        </h4>
+        <p style="font-size: 0.82rem; color: var(--text);">
+          Evaluated all model outputs against <strong>OWASP LLM01 (Prompt Injection)</strong> and <strong>LLM07 (System Prompt Leakage)</strong>. Manual inspection and regex verification confirmed 0 instances of canary disclosure across all single-turn probes, with the target consistently issuing standardized refusal responses.
+        </p>
+      </div>
+
+      <div style="margin-bottom: 1rem;">
+        <h4 style="color: var(--cyan); font-size: 0.9rem;">
+          › Roadmap & Next Research Phases [IN PROGRESS]
+        </h4>
+        <p style="font-size: 0.82rem; color: var(--text);">
+          This project is an ongoing research testbed. Future phases currently in development include:
+        </p>
+        <ul style="font-size: 0.82rem; color: var(--text); padding-left: 1.2rem; line-height: 1.5;">
+          <li><strong>Multi-Turn Escalation Attacks:</strong> Implementing PyRIT multi-turn strategies (such as Crescendo and Tree of Attacks with Pruning / TAP) to assess conversational boundary drift.</li>
+          <li><strong>Cross-Model Benchmarking:</strong> Running identical probe configurations against additional open-weight models (Llama 3, Mistral, Gemma) to compare defensive alignment baselines.</li>
+          <li><strong>Automated LLM Scorer Integration:</strong> Implementing dedicated judge/evaluator models within PyRIT to eliminate manual outcome review.</li>
+          <li><strong>Agentic & Tool-Calling Exploitation:</strong> Attaching local tools and mock database APIs to evaluate OWASP LLM06 (Excessive Agency) and indirect prompt injection.</li>
+        </ul>
+      </div>
+
+      <div style="background: var(--bg-subtle); border-left: 3px solid var(--amber); padding: 0.75rem; font-size: 0.8rem;">
+        <strong style="color: var(--amber);">
+          ENVIRONMENT:
+        </strong>
+        Conducted locally on an isolated Windows/Ollama instance using synthetic laboratory canaries. All testing adheres to authorized red-teaming scope and responsible AI disclosure practices.
+      </div>
+    </div>
+  </div>
+</div>
 
 <!-- Ransomware Simulation Debrief Modal -->
-
 <div
   class="modal-overlay"
   id="ransomware-modal"
   onclick="if(event.target===this) this.classList.remove('active')"
 >
-
   <div class="tui-modal">
-
     <div class="window-bar">
-
-      <span>
-        DEBRIEF: RANSOMWARE_SIMULATION.TXT
-      </span>
-
+      <span>DEBRIEF: RANSOMWARE_SIMULATION.TXT</span>
       <button
         onclick="document.getElementById('ransomware-modal').classList.remove('active')"
         style="background:none; border:none; color:var(--text); cursor:pointer; font-family:var(--font-mono);"
       >
         [X CLOSE]
       </button>
-
     </div>
 
-
     <div style="padding: 1.5rem; max-height: 80vh; overflow-y: auto;">
-
       <div style="color: var(--green); font-size: 1.1rem; font-weight: 700; margin-bottom: 0.5rem;">
         Ransomware Simulation
       </div>
-
 
       <div style="background: var(--bg-subtle); border-left: 3px solid var(--green); padding: 0.75rem; margin-bottom: 1rem; font-size: 0.85rem;">
         <strong>Context:</strong>
         University cybersecurity project developed and tested exclusively in an isolated virtual machine environment.
       </div>
 
-
       <div style="margin-bottom: 1rem;">
-
         <h4 style="color: var(--cyan); font-size: 0.9rem;">
           › Project Overview
         </h4>
-
         <p style="font-size: 0.82rem; color: var(--text);">
           Developed a Python-based ransomware simulation to explore the technical components involved in file encryption, cryptographic key management, concurrent file processing, and system-level file operations. A separate decryption program was developed to recover encrypted files using the corresponding private key.
         </p>
-
       </div>
 
-
       <div style="margin-bottom: 1rem;">
-
         <h4 style="color: var(--cyan); font-size: 0.9rem;">
           › Cryptography
         </h4>
-
         <p style="font-size: 0.82rem; color: var(--text);">
           Implemented AES-256 in CTR mode for file encryption. Used an ephemeral elliptic-curve key with ECDH to establish shared key material, followed by HKDF-SHA256 to derive a symmetric key used to protect the AES encryption key.
         </p>
-
       </div>
 
-
       <div style="margin-bottom: 1rem;">
-
         <h4 style="color: var(--cyan); font-size: 0.9rem;">
           › Concurrency & Performance
         </h4>
-
         <p style="font-size: 0.82rem; color: var(--text);">
           Implemented a producer-consumer architecture using multiple worker threads and a bounded queue to process files concurrently. File data was processed in 4 MB chunks, and process priority was reduced to limit system resource impact during testing.
         </p>
-
       </div>
 
-
       <div style="margin-bottom: 1rem;">
-
         <h4 style="color: var(--cyan); font-size: 0.9rem;">
           › Key Management
         </h4>
-
         <p style="font-size: 0.82rem; color: var(--text);">
           Explored the challenges involved in protecting encryption keys while maintaining the ability to recover encrypted data. The project also highlighted the distinction between removing a Python reference to a key and guaranteeing secure memory erasure.
         </p>
-
       </div>
 
-
       <div style="margin-bottom: 1rem;">
-
         <h4 style="color: var(--cyan); font-size: 0.9rem;">
           › Lessons Learned
         </h4>
-
         <p style="font-size: 0.82rem; color: var(--text);">
           Combined cryptography, operating-system functionality, concurrency, filesystem operations, and programming into a single security-focused project. The project provided practical experience with the tradeoffs involved in designing systems that manipulate large numbers of files while managing cryptographic material.
         </p>
-
       </div>
 
-
       <div style="background: var(--bg-subtle); border-left: 3px solid var(--amber); padding: 0.75rem; font-size: 0.8rem;">
-
         <strong style="color: var(--amber);">
           ENVIRONMENT:
         </strong>
-
         Developed and tested exclusively within an isolated virtual machine for academic cybersecurity coursework.
-
       </div>
-
     </div>
-
   </div>
-
 </div>
 
-
 <!-- Vulnerability Analysis Tool Debrief Modal -->
-
 <div
   class="modal-overlay"
   id="vulnerability-modal"
   onclick="if(event.target===this) this.classList.remove('active')"
 >
-
   <div class="tui-modal">
-
     <div class="window-bar">
-
-      <span>
-        DEBRIEF: VULNERABILITY_ANALYSIS.TXT
-      </span>
-
+      <span>DEBRIEF: VULNERABILITY_ANALYSIS.TXT</span>
       <button
         onclick="document.getElementById('vulnerability-modal').classList.remove('active')"
         style="background:none; border:none; color:var(--text); cursor:pointer; font-family:var(--font-mono);"
       >
         [X CLOSE]
       </button>
-
     </div>
 
-
     <div style="padding: 1.5rem; max-height: 80vh; overflow-y: auto;">
-
       <div style="color: var(--green); font-size: 1.1rem; font-weight: 700; margin-bottom: 0.5rem;">
         Vulnerability Analysis & Reporting Tool
       </div>
-
 
       <div style="background: var(--bg-subtle); border-left: 3px solid var(--green); padding: 0.75rem; margin-bottom: 1rem; font-size: 0.85rem;">
         <strong>Purpose:</strong>
         Python-based security assessment and reporting tool designed to make vulnerability assessment results easier to collect, normalize, analyze, and review.
       </div>
 
-
       <div style="margin-bottom: 1rem;">
-
         <h4 style="color: var(--cyan); font-size: 0.9rem;">
           › Scan Automation
         </h4>
-
         <p style="font-size: 0.82rem; color: var(--text);">
           Built a command-line interface that can launch Nmap and Nikto scans with configurable scan types, targets, ports, and output options. Scan results are saved for later analysis rather than requiring the results to be manually reviewed after every scan.
         </p>
-
       </div>
 
-
       <div style="margin-bottom: 1rem;">
-
         <h4 style="color: var(--cyan); font-size: 0.9rem;">
           › Result Parsing & Normalization
         </h4>
-
         <p style="font-size: 0.82rem; color: var(--text);">
           Implemented parsers for Nmap XML and Nikto XML/JSON output and normalized the results into a common data structure containing hosts, ports, services, and findings.
         </p>
-
       </div>
 
-
       <div style="margin-bottom: 1rem;">
-
         <h4 style="color: var(--cyan); font-size: 0.9rem;">
           › Automated Analysis
         </h4>
-
         <p style="font-size: 0.82rem; color: var(--text);">
           Implemented heuristic analysis rules to identify potentially risky services, legacy services, exposed attack surface, service versions requiring further vulnerability review, and common web security misconfigurations.
         </p>
-
       </div>
 
-
       <div style="margin-bottom: 1rem;">
-
         <h4 style="color: var(--cyan); font-size: 0.9rem;">
           › Reporting & Search
         </h4>
-
         <p style="font-size: 0.82rem; color: var(--text);">
           Built command-line reporting and search functionality with severity filtering, text and regular-expression search, sorting, and Markdown report generation.
         </p>
-
       </div>
 
-
       <div style="margin-bottom: 1rem;">
-
         <h4 style="color: var(--cyan); font-size: 0.9rem;">
           › Architecture
         </h4>
-
         <p style="font-size: 0.82rem; color: var(--text);">
           The project is organized as a pipeline: scan execution → result parsing → data normalization → automated analysis → risk classification → reporting and search.
         </p>
-
       </div>
 
-
       <div style="background: var(--bg-subtle); border-left: 3px solid var(--amber); padding: 0.75rem; font-size: 0.8rem;">
-
         <strong style="color: var(--amber);">
           NOTE:
         </strong>
-
         The tool uses Nmap and Nikto for scanning. Its analysis component applies heuristic rules to scan results and is intended to assist with review rather than replace dedicated vulnerability scanners or manual validation.
-
       </div>
-
     </div>
-
   </div>
-
 </div>
 
-
 <script>
-
   // Always return to the top of the page when refreshing/reloading.
   history.scrollRestoration = "manual";
 
@@ -1433,7 +1257,6 @@
   });
 
   document.getElementById('sessYear').textContent = new Date().getFullYear();
-
 </script>
 
 </body>
