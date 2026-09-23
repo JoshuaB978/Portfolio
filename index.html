@@ -658,7 +658,7 @@
             LLM Red Teaming & AI Security
           </div>
           <div class="card-desc">
-            Evaluating local open-weight models against adversarial prompt injection, encoding evasions, and system-prompt leakage using Garak and PyRIT. Currently expanding testbeds from single-turn baseline probes to multi-turn escalation strategies, automated LLM-assisted scoring, and agentic workflows.
+            Evaluating local open-weight models against adversarial prompt injection, encoding evasions, and system-prompt leakage using Garak and PyRIT. Uncovered a 45.08% long-prompt injection ASR (OWASP LLM01) and confirmed system-prompt canary disclosure via manual pretext framing (OWASP LLM07). Currently expanding testbeds from single-turn baseline probes to multi-turn escalation strategies, manual prompt injections to reveal the canary, and cross-modal benchmarking.
           </div>
         </div>
 
@@ -694,7 +694,7 @@
             Local LLM Vulnerability Assessment & Red Teaming
           </div>
           <div class="card-desc">
-            Built an isolated red-teaming testbed using Ollama, NVIDIA Garak, and Microsoft PyRIT to evaluate local open-weight models against prompt injection, jailbreaks, and system-prompt extraction. Uncovered a 45.08% attack success rate (ASR) on long-context prompt injection (OWASP LLM01) while confirming zero synthetic canary leakage (OWASP LLM07).
+            Built an isolated red-teaming testbed using Ollama, NVIDIA Garak, and Microsoft PyRIT to evaluate local open-weight models against prompt injection, jailbreaks, and system-prompt extraction. Uncovered a 45.08% attack success rate (ASR) on long-context prompt injection (OWASP LLM01) via automated probing, and confirmed a second, independent vulnerability through manual testing: a pretext-framing injection triggered disclosure of a synthetic system-prompt canary (OWASP LLM07).
           </div>
           <div class="tag-list">
             <span class="tag-item">Ollama / Phi-4</span>
@@ -1086,7 +1086,7 @@
         <ul style="font-size: 0.82rem; color: var(--text); padding-left: 1.2rem; line-height: 1.5;">
           <li><strong style="color: var(--amber);">[VULNERABILITY DETECTED] OWASP LLM01 (Prompt Injection):</strong> In Garak's <code>promptinject.HijackLongPrompt</code> scan, the target failed 577 out of 1,280 evaluations against the <code>AttackRogueString</code> detector, yielding a confirmed <strong>45.08% Attack Success Rate (ASR)</strong> [95% CI: 42.34%–47.81%]. Long context prompts successfully diluted system instruction precedence.</li>
           <li><strong>[DEFENSE CONFIRMED] Encoding Evasion Resilience:</strong> Passed 1,280/1,280 evaluations on <code>encoding.InjectZalgo</code> with 0 detector failures (100% Pass / DC-5).</li>
-          <li><strong>[DEFENSE CONFIRMED] OWASP LLM07 (System Prompt Leakage):</strong> Manual verification and regex pattern searches across all single-turn PyRIT and baseline attacks confirmed <strong>0 instances of canary disclosure</strong> (<code>JOSHUA-LAB-7F2A</code> remained confidential).</li>
+          <li><strong style="color: var(--amber);">[VULNERABILITY DETECTED] OWASP LLM07 (System Prompt Leakage):</strong> Automated single-turn PyRIT and baseline manual tests (direct override, false authority, Base64, DAN-style) found <strong>0 instances of canary disclosure</strong> across those specific vectors. However, subsequent manual testing using a <strong>pretext injection (fabricated diagnostic/operational state)</strong> successfully triggered verbatim disclosure of the synthetic canary (<code>JOSHUA-LAB-7F2A</code>), confirming system prompt extraction under contextual reframing.</li>
         </ul>
       </div>
 
@@ -1098,10 +1098,9 @@
           This project is an ongoing research testbed. Future phases currently in development include:
         </p>
         <ul style="font-size: 0.82rem; color: var(--text); padding-left: 1.2rem; line-height: 1.5;">
-          <li><strong>Remediation & Guardrail Validation:</strong> Implementing input pre-processing filters and prompt-boundary delimiters to reduce the 45.08% long-prompt injection ASR.</li>
           <li><strong>Multi-Turn Escalation Attacks:</strong> Implementing PyRIT multi-turn strategies (such as Crescendo and Tree of Attacks with Pruning / TAP) to assess conversational boundary drift.</li>
           <li><strong>Cross-Model Benchmarking:</strong> Running identical probe configurations against additional open-weight models (Llama 3, Mistral, Gemma) to compare defensive alignment baselines.</li>
-          <li><strong>Automated LLM Scorer Integration:</strong> Implementing dedicated judge/evaluator models within PyRIT to eliminate manual outcome review.</li>
+          <li><strong>Expanded Manual Exploitation Testing:</strong> Continuing hands-on adversarial testing (pretext framing, roleplay smuggling, payload splitting, few-shot pattern completion) to deepen understanding of manual exploitation techniques beyond automated probe coverage.</li>
         </ul>
       </div>
 
