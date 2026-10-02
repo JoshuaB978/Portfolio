@@ -396,7 +396,6 @@ button.btn-cli { cursor: pointer; }
   height: calc(100% - 12px);
   object-fit: cover;
   border-radius: 18px;
-  filter: grayscale(100%) contrast(120%);
 }
 
 /* Metrics */
