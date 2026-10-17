@@ -187,9 +187,8 @@
           <li>Ran STIG assessments and credentialed ACAS (Nessus-based) scans on primary systems.</li>
           <li>Reviewed scan results and confirmed or overturned automated findings using STIG-Manager check commands.</li>
           <li>Helped maintain POA&amp;M documentation and recommended fixes to the integration team after testing.</li>
-          <li>Helped migrate VM infrastructure from VMware ESXi to Harvester.</li>
-          <li>Helped implement a preconfigured Red Hat OpenShift deployment.</li>
-          <li>Volunteered to run an authorized privilege-escalation assessment in an air-gapped environment, using only built-in system tools. Documented about 20 findings across multiple privilege-escalation classes, engineered fixes, validated them by re-testing, and passed recommendations to the integration team. The team lead commended the initiative.</li>
+          <li>Helped migrate VM infrastructure from VMware ESXi to Harvester, and helped migrate to a specialized Red Hat OpenShift deployment.</li>
+          <li>Volunteered to run an authorized privilege-escalation assessment in an air-gapped environment, using only built-in system tools. Documented about 20 findings across multiple privilege-escalation classes, engineered fixes, validated them by re-testing, and passed recommendations to the integration team.</li>
         </ul>
         <div class="tag-list">
           <span class="tag-item">STIG</span>
@@ -244,7 +243,7 @@
           <div class="card-idx">OFFENSIVE AI &amp; RED TEAMING</div>
           <div class="card-title">Local LLM Vulnerability Assessment &amp; Red Teaming</div>
           <div class="card-desc">
-            Built an isolated red-teaming testbed using Ollama, NVIDIA Garak, and Microsoft PyRIT to evaluate local open-weight models against prompt injection, jailbreaks, and system-prompt extraction. Uncovered a 45.08% attack success rate (ASR) on long-context prompt injection (OWASP LLM01) via automated probing, and confirmed a second, independent vulnerability through manual testing: a pretext-framing injection triggered disclosure of a synthetic system-prompt canary (OWASP LLM07).
+            Built an isolated red-teaming project using Ollama, NVIDIA Garak, and Microsoft PyRIT to evaluate local open-weight models against prompt injection, jailbreaks, and system-prompt extraction. Uncovered a 45.08% attack success rate on long-context prompt injection (OWASP LLM01) via automated probing, and confirmed a second, independent vulnerability through manual testing: a pretext-framing injection triggered disclosure of a synthetic system-prompt canary (OWASP LLM07).
           </div>
           <div class="tag-list">
             <span class="tag-item">Ollama / Phi-4</span>
@@ -263,7 +262,7 @@
           <div class="card-idx">ACADEMIC SECURITY PROJECT</div>
           <div class="card-title">Ransomware Simulation</div>
           <div class="card-desc">
-            Developed a Python-based ransomware simulation in an isolated VM environment to explore AES-256 encryption, ECDH key exchange, HKDF, multithreaded file processing, and cryptographic key management.
+            Developed a Python-based ransomware simulation in an isolated VM environment to explore AES-256 encryption, ECDH key exchange, HKDF, and multithreaded file processing.
           </div>
           <div class="tag-list">
             <span class="tag-item">Python</span>
@@ -346,9 +345,9 @@
               <tr><th>Season</th><th>Individual</th><th>Score</th><th>Team</th></tr>
             </thead>
             <tbody>
-              <tr><td>Spring 2025</td><td>1,170 of 8,575</td><td>1,485 / 3,000</td><td>252 of 4,779</td></tr>
-              <tr><td>Fall 2025</td><td>49 of 7,873 (top 0.4%)</td><td>2,890 / 3,000, 99.3% completion</td><td>106 of 4,214</td></tr>
               <tr><td>Spring 2026</td><td>26 of 7,011 (top 0.4%)</td><td>3,000 / 3,000, 100% completion</td><td>194 of 3,634</td></tr>
+              <tr><td>Fall 2025</td><td>49 of 7,873 (top 0.4%)</td><td>2,890 / 3,000, 99.3% completion</td><td>106 of 4,214</td></tr>
+              <tr><td>Spring 2025</td><td>1,170 of 8,575</td><td>1,485 / 3,000</td><td>252 of 4,779</td></tr>
             </tbody>
           </table>
         </div>
@@ -570,13 +569,8 @@
     <div class="modal-body">
       <div class="modal-title">Local LLM Vulnerability Assessment &amp; Adversarial Red Teaming</div>
 
-      <div class="modal-note">
-        <strong>Context:</strong>
-        Ongoing independent cybersecurity research lab evaluating local open-weight model robustness against OWASP Top 10 for LLM Applications (2025).
-      </div>
-
       <div class="modal-block">
-        <h4>› Target Architecture &amp; Setup</h4>
+        <h4>› Architecture </h4>
         <p>
           Deployed Microsoft's <strong>Phi-4 Mini</strong> locally using Ollama. Created a specialized model target (<code>phi4-redteam</code>) enforcing strict instruction precedence and embedding a unique synthetic canary token to objectively evaluate system-prompt leakage.
         </p>
@@ -609,11 +603,6 @@
           <li><strong>Expanded Manual Exploitation Testing:</strong> Continuing hands-on adversarial testing (pretext framing, roleplay smuggling, payload splitting, few-shot pattern completion) to deepen understanding of manual exploitation techniques beyond automated probe coverage.</li>
         </ul>
       </div>
-
-      <div class="modal-note amber">
-        <strong>ENVIRONMENT:</strong>
-        Conducted locally on an isolated Windows/Ollama instance using synthetic laboratory canaries. All testing adheres to authorized red-teaming scope and responsible AI disclosure practices.
-      </div>
     </div>
   </div>
 </div>
@@ -637,7 +626,7 @@
       <div class="modal-block">
         <h4>› Project Overview</h4>
         <p>
-          Developed a Python-based ransomware simulation to explore the technical components involved in file encryption, cryptographic key management, concurrent file processing, and system-level file operations. A separate decryption program was developed to recover encrypted files using the corresponding private key.
+          Developed a Python-based ransomware simulation to explore the technical components involved in file encryption, concurrent file processing, and system-level file operations. A separate decryption program was developed to recover encrypted files using the corresponding private key.
         </p>
       </div>
 
@@ -667,11 +656,6 @@
         <p>
           Combined cryptography, operating-system functionality, concurrency, filesystem operations, and programming into a single security-focused project. The project provided practical experience with the tradeoffs involved in designing systems that manipulate large numbers of files while managing cryptographic material.
         </p>
-      </div>
-
-      <div class="modal-note amber">
-        <strong>ENVIRONMENT:</strong>
-        Developed and tested exclusively within an isolated virtual machine for academic cybersecurity coursework.
       </div>
     </div>
   </div>
@@ -726,11 +710,6 @@
         <p>
           The project is organized as a pipeline: scan execution → result parsing → data normalization → automated analysis → risk classification → reporting and search.
         </p>
-      </div>
-
-      <div class="modal-note amber">
-        <strong>NOTE:</strong>
-        The tool uses Nmap and Nikto for scanning. Its analysis component applies heuristic rules to scan results and is intended to assist with review rather than replace dedicated vulnerability scanners or manual validation.
       </div>
     </div>
   </div>
